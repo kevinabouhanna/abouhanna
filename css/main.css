@@ -1,3 +1,7 @@
+body {
+    margin: 0
+}
+
 img.bg {
   /* Set rules to fill background */
   min-height: 100%;
