@@ -5,3 +5,19 @@
    flex-direction: column;
    align-items: center;
 }
+
+/* position modifiers */
+.position-relative {
+  position: relative
+}
+
+/* whitelabel */
+#white-labeling-airtable {
+    position: absolute;
+    border: solid 1px #CCCCCC;
+    border-top: unset;
+    width: 99.15vw;
+    height: 30px;
+    bottom: 0;
+    background: #F6F6F6;
+}
