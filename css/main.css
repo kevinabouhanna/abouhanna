@@ -15,8 +15,9 @@
 #white-labeling-airtable {
     position: absolute;
     border: solid 1px #FFF;
+    border-top: 1px solid #ccc;
     width: calc(100vw - 16px);
-    height: 27px;
+    height: 28px;
     bottom: 0;
     background: #FFF;
 }
