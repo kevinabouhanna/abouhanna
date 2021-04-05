@@ -16,7 +16,7 @@
     position: absolute;
     border: solid 1px #CCCCCC;
     border-top: unset;
-    width: 99.15vw;
+    width: calc(100vw - 16px);
     height: 28px;
     bottom: 0;
     background: #F6F6F6;
