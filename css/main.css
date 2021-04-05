@@ -14,10 +14,10 @@
 /* whitelabel */
 #white-labeling-airtable {
     position: absolute;
-    border: solid 1px #CCCCCC;
+    border: solid 1px #FFF;
     border-top: unset;
     width: calc(100vw - 16px);
     height: 28px;
     bottom: 0;
-    background: #F6F6F6;
+    background: #FFF;
 }
