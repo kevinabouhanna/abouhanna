@@ -11,6 +11,13 @@
   position: relative
 }
 
+.airtable-embed {
+  background: transparent; 
+  border: 1px solid #ccc; 
+  height: calc(100vh - 126px);
+  width: 100%
+}
+
 /* whitelabel */
 #white-labeling-airtable {
     position: absolute;
