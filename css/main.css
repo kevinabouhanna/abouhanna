@@ -71,7 +71,7 @@ a {
 .airtable-embed {
   background: transparent;
   box-shadow: rgb(0 0 0 / 15%) 0px 0px 0px 1px;
-  height: calc(100vh - 260px);
+  height: calc(100vh - 180px);
   width: 100%
 }
 
@@ -97,9 +97,9 @@ a {
 
   /* whitelabel */
   #white-labeling-airtable {
-    width: 1442px;
+    width: 1440px;
     bottom: 9px;
-    left: 9px;
+    left: 10px;
   }
 
   .airtable-embed {
