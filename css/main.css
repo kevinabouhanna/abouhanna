@@ -160,6 +160,7 @@ a {
 
   .profile-picture {
     width: 200px;
+    height: 200px;
     border: 1px dotted #111;
   }
 
