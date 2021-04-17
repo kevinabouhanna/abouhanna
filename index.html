@@ -24,11 +24,13 @@
 
 <body>
   <h2 class="intro-title">
-    <span>Hello 👋</span>
+    <span><label id="greetingHuman"></label> 👋</span>
     <span>I am Kevin Abou Hanna; check out my awesome reading list 😎</span>
   </h2>
   <div class="position-relative">
-    <iframe class="airtable-embed" src="https://airtable.com/embed/shrevDlO7FaCTXcdp?backgroundColor=cyan&viewControls=on" frameborder="0" onmousewheel=""></iframe>
+    <iframe class="airtable-embed"
+      src="https://airtable.com/embed/shrevDlO7FaCTXcdp?backgroundColor=cyan&viewControls=on" frameborder="0"
+      onmousewheel=""></iframe>
     <div id="white-labeling-airtable"></div>
   </div>
   <!-- Add your site or application content here -->
@@ -36,14 +38,34 @@
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 
+  <script>
+    var myDate = new Date();
+    var hrs = myDate.getHours();
+
+    var greet;
+
+    if (hrs < 12)
+      greet = 'Good Morning';
+    else if (hrs >= 12 && hrs <= 17)
+      greet = 'Good Afternoon';
+    else if (hrs >= 17 && hrs <= 24)
+      greet = 'Good Evening';
+
+    document.getElementById('greetingHuman').innerHTML = greet;
+
+  </script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154952429-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
     gtag('js', new Date());
 
     gtag('config', 'UA-154952429-1');
+
   </script>
 
 </body>

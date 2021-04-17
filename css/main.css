@@ -1,9 +1,9 @@
 .intro-title {
-   font-family: helvetica, sans-serif;
-   line-height: 1.5em;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+  font-family: helvetica, sans-serif;
+  line-height: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* position modifiers */
@@ -12,19 +12,19 @@
 }
 
 .airtable-embed {
-  background: transparent; 
-  border: 1px solid #ccc; 
+  background: transparent;
+  border-top: 1px solid #ccc;
   height: calc(100vh - 126px);
   width: 100%
 }
 
 /* whitelabel */
 #white-labeling-airtable {
-    position: absolute;
-    border: solid 1px #FFF;
-    border-top: 1px solid #ccc;
-    width: calc(100vw - 16px);
-    height: 28px;
-    bottom: 0;
-    background: #FFF;
+  position: absolute;
+  border: solid 1px #FFF;
+  border-top: 1px solid #ccc;
+  width: calc(100vw - 2px);
+  height: 27px;
+  bottom: 0;
+  background: #FFF;
 }
