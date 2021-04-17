@@ -71,12 +71,11 @@ a {
 /* whitelabel */
 #white-labeling-airtable {
   position: absolute;
-  border: solid 1px #ededed;
   border-top: 1px solid #ccc;
-  width: calc(100vw - 19px);
+  width: calc(100vw - 17px);
   height: 23px;
   bottom: 10px;
-  background: #ededed;
+  background: var(--background-color);
 }
 
 @media screen and (max-width: 600px) {
@@ -86,6 +85,12 @@ a {
 
   h1 {
     font-size: 1.8em;
+  }
+
+  /* whitelabel */
+  #white-labeling-airtable {
+    width: 100vw;
+    bottom: 6px;
   }
 }
 
