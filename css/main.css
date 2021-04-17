@@ -12,7 +12,7 @@
 }
 
 .dark {
-  --background-color: #111;
+  --background-color: #282828;
   --color: #ccbeaf;
   --accent: #9488c3;
   --semi: hsla(0, 0%, 100%, 20%);
@@ -161,7 +161,7 @@ a {
   .profile-picture {
     width: 200px;
     height: 200px;
-    border: 1px dotted #111;
+    border: 1px dotted #282828;
   }
 
   .intro-container {
