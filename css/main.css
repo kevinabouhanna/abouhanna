@@ -1,6 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;700&display=swap');
+
+:root {
+  --background-color: #f5f5f5;
+  --color: #2b2b2b;
+  --accent: #66023C;
+  --semi: hsla(0, 0%, 0%, 20%);
+  --background-color-tint: white;
+  --background-info: #e0dfdd;
+  --font: 1.6rem/1.63 'IBM Plex Serif', 'Georgia', serif;
+  --transition: 1.25s all ease;
+}
+
+.dark {
+  --background-color: #111;
+  --color: #ccbeaf;
+  --accent: #fb9904;
+  --semi: hsla(0, 0%, 100%, 20%);
+  --background-color-tint: #24201b;
+  --background-info: #443625;
+}
+
+body {
+  margin: 0;
+  font: var(--font);
+  font-feature-settings: 'case', 'calt', 'tnum', 'ss01', 'zero';
+  text-rendering: optimizeLegibility;
+  background: var(--background-color);
+  color: var(--color);
+  opacity: 0;
+  animation: fade 1s ease-in forwards 0.3s;
+}
+
+h1 {
+  font-size: 2.4em;
+  color: var(--accent);
+  margin: 0;
+}
+
+a {
+  color: var(--accent);
+  word-break: break-word;
+}
+
+.container {
+  position: relative;
+  max-width: 800px;
+  padding: 1.5em;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
 .intro-title {
-  font-family: helvetica, sans-serif;
-  line-height: 1.5em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,8 +73,29 @@
   position: absolute;
   border: solid 1px #FFF;
   border-top: 1px solid #ccc;
-  width: calc(100vw - 2px);
+  width: calc(100vw - 19px);
   height: 27px;
   bottom: 0;
   background: #FFF;
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --font: 1.2rem/1.53 'IBM Plex Serif', 'Georgia', serif;
+  }
+  h1 {
+    font-size: 1.8em;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: scale(0.994);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
