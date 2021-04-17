@@ -3,7 +3,7 @@
 :root {
   --background-color: #ededed;
   --color: #2b2b2b;
-  --accent: #66023C;
+  --accent: #9488c3;
   --semi: hsla(0, 0%, 0%, 20%);
   --background-color-tint: white;
   --background-info: #e0dfdd;
@@ -14,7 +14,7 @@
 .dark {
   --background-color: #111;
   --color: #ccbeaf;
-  --accent: #fb9904;
+  --accent: #9488c3;
   --semi: hsla(0, 0%, 100%, 20%);
   --background-color-tint: #24201b;
   --background-info: #443625;
@@ -54,23 +54,34 @@ a {
   word-break: break-word;
 }
 
+.profile-picture-container {
+  display: none;
+}
+
 .intro-container {
   position: relative;
-  max-width: 800px;
-  padding: .5em;
+  max-width: 900px;
+  padding: .75em;
   margin: 0 auto;
   box-sizing: border-box;
 }
 
-.wave {
-  animation-name: wave-animation;
+.airtable-container {
+  position: relative
+}
+
+.hello {
+  animation-name: hello-animation;
   animation-duration: 2.5s;
   animation-iteration-count: infinite;
   transform-origin: 70% 70%;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.8em;
+  padding-left: 15px;
 }
 
-@keyframes wave-animation {
+@keyframes hello-animation {
   0% {
     transform: rotate(0.0deg)
   }
@@ -79,7 +90,6 @@ a {
     transform: rotate(14.0deg)
   }
 
-  /* The following five values can be played with to make the waving more or less extreme */
   20% {
     transform: rotate(-8.0deg)
   }
@@ -108,6 +118,7 @@ a {
 
 .intro-description {
   font-size: 0.8em;
+  margin: 10px;
 }
 
 .intro-title {
@@ -115,22 +126,17 @@ a {
   justify-content: center;
 }
 
-/* position modifiers */
-.position-relative {
-  position: relative
-}
-
 .airtable-embed {
   background: transparent;
   box-shadow: rgb(0 0 0 / 15%) 0px 0px 0px 1px;
   height: calc(100vh - 180px);
-  width: 100%
+  width: calc(100vw - 20px);
+  margin: 10px;
 }
 
 /* whitelabel */
 #white-labeling-airtable {
   position: absolute;
-  border-top: 1px solid #ccc;
   width: 100vw;
   height: 25px;
   bottom: 5px;
@@ -147,15 +153,37 @@ a {
     font-size: 2.4em;
   }
 
+  .profile-picture-container {
+    display: block;
+    padding-right: 30px;
+  }
+
+  .profile-picture {
+    width: 200px;
+    border: 1px dotted #111;
+  }
+
+  .intro-container {
+    align-items: center;
+    display: flex;
+    padding: 1.5em 0.75em;
+  }
+
+  .intro-description {
+    margin: unset;
+  }
+
   /* whitelabel */
   #white-labeling-airtable {
-    width: 1440px;
+    width: 1442px;
     bottom: 9px;
-    left: 10px;
+    left: 9px;
   }
 
   .airtable-embed {
     height: calc(100vh - 310px);
+    width: 100%;
+    margin: unset;
   }
 
   .airtable-container {

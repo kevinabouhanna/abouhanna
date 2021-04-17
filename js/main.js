@@ -6,11 +6,11 @@ var hrs = myDate.getHours();
 var greet;
 
 if (hrs >= 4 && hrs < 12)
-    greet = 'Good Morning' + '<span class="wave"> 👋🏼</span>';
+    greet = 'Good Morning' + '<span class="hello"> 👋🏼</span>';
 else if (hrs >= 12 && hrs <= 17)
-    greet = 'Good Afternoon' + '<span class="wave"> 👋🏼</span>';
+    greet = 'Good Afternoon' + '<span class="hello"> 👋🏼</span>';
 else
-    greet = 'Good Evening' + '<span class="wave"> 👋🏼</span>';
+    greet = 'Good Evening' + '<span class="hello"> 👋🏼</span>';
 
 document.getElementById('greetingHuman').innerHTML = greet;
 
