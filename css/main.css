@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;700&display=swap');
 
 :root {
-  --background-color: #f5f5f5;
+  --background-color: #ededed;
   --color: #2b2b2b;
   --accent: #66023C;
   --semi: hsla(0, 0%, 0%, 20%);
@@ -71,18 +71,19 @@ a {
 /* whitelabel */
 #white-labeling-airtable {
   position: absolute;
-  border: solid 1px #FFF;
+  border: solid 1px #ededed;
   border-top: 1px solid #ccc;
   width: calc(100vw - 19px);
-  height: 27px;
-  bottom: 0;
-  background: #FFF;
+  height: 23px;
+  bottom: 10px;
+  background: #ededed;
 }
 
 @media screen and (max-width: 600px) {
   :root {
     --font: 1.2rem/1.53 'IBM Plex Serif', 'Georgia', serif;
   }
+
   h1 {
     font-size: 1.8em;
   }
