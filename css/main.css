@@ -7,7 +7,7 @@
   --semi: hsla(0, 0%, 0%, 20%);
   --background-color-tint: white;
   --background-info: #e0dfdd;
-  --font: 1.6rem/1.63 'IBM Plex Serif', 'Georgia', serif;
+  --font: 1.2rem/1.53 'IBM Plex Serif', 'Georgia', serif;
   --transition: 1.25s all ease;
 }
 
@@ -32,7 +32,7 @@ body {
 }
 
 h1 {
-  font-size: 2.4em;
+  font-size: 1.5em;
   color: var(--accent);
   margin: 0;
 }
@@ -45,7 +45,7 @@ a {
 .container {
   position: relative;
   max-width: 800px;
-  padding: 1.5em;
+  padding: .5em;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -63,8 +63,8 @@ a {
 
 .airtable-embed {
   background: transparent;
-  border-top: 1px solid #ccc;
-  height: calc(100vh - 126px);
+  box-shadow: rgb(0 0 0 / 15%) 0px 0px 0px 1px;
+  height: calc(100vh - 260px);
   width: 100%
 }
 
@@ -72,25 +72,39 @@ a {
 #white-labeling-airtable {
   position: absolute;
   border-top: 1px solid #ccc;
-  width: calc(100vw - 17px);
-  height: 23px;
-  bottom: 10px;
+  width: 100vw;
+  height: 25px;
+  bottom: 5px;
   background: var(--background-color);
 }
 
-@media screen and (max-width: 600px) {
+/* desktop styles */
+@media screen and (min-width: 600px) {
   :root {
-    --font: 1.2rem/1.53 'IBM Plex Serif', 'Georgia', serif;
+    --font: 1.6rem/1.63 'IBM Plex Serif', 'Georgia', serif;
   }
 
   h1 {
-    font-size: 1.8em;
+    font-size: 2.4em;
   }
 
   /* whitelabel */
   #white-labeling-airtable {
-    width: 100vw;
-    bottom: 6px;
+    width: calc(75vw + 2px);
+    bottom: 9px;
+    left: 9px;
+  }
+
+  .airtable-embed {
+    height: calc(100vh - 310px);
+  }
+
+  .airtable-container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1440px;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 }
 
