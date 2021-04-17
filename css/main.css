@@ -42,12 +42,19 @@ a {
   word-break: break-word;
 }
 
-.container {
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
-  max-width: 800px;
+  max-width: 880px;
   padding: .5em;
   margin: 0 auto;
   box-sizing: border-box;
+}
+
+.intro-description {
+  font-size: 0.8em;
 }
 
 .intro-title {
@@ -90,7 +97,7 @@ a {
 
   /* whitelabel */
   #white-labeling-airtable {
-    width: calc(75vw + 2px);
+    width: 1442px;
     bottom: 9px;
     left: 9px;
   }
