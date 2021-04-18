@@ -70,12 +70,12 @@ a {
 
 .hello {
   animation-name: hello-animation;
-  animation-duration: 2.5s;
+  animation-duration: 10s;
   animation-iteration-count: infinite;
   transform-origin: 70% 70%;
   display: inline-flex;
   align-items: center;
-  font-size: 0.8em;
+  font-size: 0.6em;
   padding-left: 15px;
 }
 
