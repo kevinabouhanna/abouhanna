@@ -40,6 +40,9 @@ https://abouhanna.com/humans.txt  <---- and this is hello in my native language
         <p class="intro-description">
           My name is
           <strong>Kevin Abou Hanna</strong>
+          <button class="speaker-high-volume cursor-pointer" type="button" onclick="pronounceMyName()">🔊</button>
+          <!-- You're audio source -->
+          <audio id="audio" class="hidden" src="assets/kevin_abou_hanna_name_pronunciation.ogg"></audio>
           I am a self-taught
           <strong>Frontend Web Developer</strong>
           and
@@ -75,6 +78,12 @@ https://abouhanna.com/humans.txt  <---- and this is hello in my native language
     gtag('js', new Date());
 
     gtag('config', 'UA-154952429-1');
+
+    // pronounce my name
+    function pronounceMyName() {
+      var audio = document.getElementById("audio");
+      audio.play();
+    }
 
   </script>
 

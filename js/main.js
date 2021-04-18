@@ -22,3 +22,4 @@ if (document.body) {
         document.body.className = "dark";
     }
 }
+

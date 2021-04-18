@@ -31,18 +31,8 @@ body {
   animation: fade 1s ease-in forwards 0.3s;
 }
 
-@keyframes fade {
-  from {
-    opacity: 0;
-    transform: scale(0.994);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
+/* general classes
+     ========================================================================== */
 h1 {
   font-size: 1.5em;
   color: var(--accent);
@@ -54,6 +44,14 @@ a {
   word-break: break-word;
 }
 
+/* utility classes
+     ========================================================================== */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* homepage classes
+     ========================================================================== */
 .profile-picture-container {
   display: none;
 }
@@ -79,6 +77,113 @@ a {
   align-items: center;
   font-size: 0.8em;
   padding-left: 15px;
+}
+
+.intro-description {
+  font-size: 0.8em;
+  margin: 10px;
+}
+
+.intro-title {
+  display: flex;
+  justify-content: center;
+}
+
+.speaker-high-volume {
+  background: unset;
+  border: unset;
+  font-size: 0.8em;
+  padding: 0;
+  margin-right: 2px;
+}
+
+.airtable-embed {
+  background: transparent;
+  box-shadow: rgb(0 0 0 / 15%) 0px 0px 0px 1px;
+  height: calc(100vh - 180px);
+  width: calc(100vw - 20px);
+  margin: 10px;
+}
+
+/**
+   * white-label airtable mobile
+   */
+#white-labeling-airtable {
+  position: absolute;
+  width: 100vw;
+  height: 25px;
+  bottom: 15px;
+  background: var(--background-color);
+}
+
+/* desktop styles
+     ========================================================================== */
+@media screen and (min-width: 600px) {
+  :root {
+    --font: 1.6rem/1.63 'IBM Plex Serif', 'Georgia', serif;
+  }
+
+  h1 {
+    font-size: 2.4em;
+  }
+
+  .profile-picture-container {
+    display: block;
+    padding-right: 30px;
+  }
+
+  .profile-picture {
+    width: 200px;
+    height: 200px;
+    border: 1px dotted #282828;
+  }
+
+  .intro-container {
+    align-items: center;
+    display: flex;
+    padding: 1.5em 0.75em;
+  }
+
+  .intro-description {
+    margin: unset;
+  }
+
+  /**
+   * white-label airtable desktop
+   */
+  #white-labeling-airtable {
+    width: 1442px;
+    bottom: 9px;
+    left: 9px;
+  }
+
+  .airtable-embed {
+    height: calc(100vh - 310px);
+    width: 100%;
+    margin: unset;
+  }
+
+  .airtable-container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1440px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+/* animations
+     ========================================================================== */
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: scale(0.994);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @keyframes hello-animation {
@@ -110,88 +215,7 @@ a {
     transform: rotate(0.0deg)
   }
 
-  /* Reset for the last half to pause */
   100% {
     transform: rotate(0.0deg)
-  }
-}
-
-.intro-description {
-  font-size: 0.8em;
-  margin: 10px;
-}
-
-.intro-title {
-  display: flex;
-  justify-content: center;
-}
-
-.airtable-embed {
-  background: transparent;
-  box-shadow: rgb(0 0 0 / 15%) 0px 0px 0px 1px;
-  height: calc(100vh - 180px);
-  width: calc(100vw - 20px);
-  margin: 10px;
-}
-
-/* whitelabel */
-#white-labeling-airtable {
-  position: absolute;
-  width: 100vw;
-  height: 25px;
-  bottom: 15px;
-  background: var(--background-color);
-}
-
-/* desktop styles */
-@media screen and (min-width: 600px) {
-  :root {
-    --font: 1.6rem/1.63 'IBM Plex Serif', 'Georgia', serif;
-  }
-
-  h1 {
-    font-size: 2.4em;
-  }
-
-  .profile-picture-container {
-    display: block;
-    padding-right: 30px;
-  }
-
-  .profile-picture {
-    width: 200px;
-    height: 200px;
-    border: 1px dotted #282828;
-  }
-
-  .intro-container {
-    align-items: center;
-    display: flex;
-    padding: 1.5em 0.75em;
-  }
-
-  .intro-description {
-    margin: unset;
-  }
-
-  /* whitelabel */
-  #white-labeling-airtable {
-    width: 1442px;
-    bottom: 9px;
-    left: 9px;
-  }
-
-  .airtable-embed {
-    height: calc(100vh - 310px);
-    width: 100%;
-    margin: unset;
-  }
-
-  .airtable-container {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1440px;
-    padding-right: 10px;
-    padding-left: 10px;
   }
 }
