@@ -4,9 +4,7 @@
   --background-color: #ededed;
   --color: #2b2b2b;
   --accent: #9488c3;
-  --semi: hsla(0, 0%, 0%, 20%);
-  --background-color-tint: white;
-  --background-info: #e0dfdd;
+  --focus: #2d7ff9;
   --font: 1.2rem/1.53 'IBM Plex Serif', 'Georgia', serif;
   --transition: 1.25s all ease;
 }
@@ -15,9 +13,6 @@
   --background-color: #282828;
   --color: #ccbeaf;
   --accent: #9488c3;
-  --semi: hsla(0, 0%, 100%, 20%);
-  --background-color-tint: #24201b;
-  --background-info: #443625;
 }
 
 body {
@@ -29,6 +24,11 @@ body {
   color: var(--color);
   opacity: 0;
   animation: fade 1s ease-in forwards 0.3s;
+}
+
+:focus {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
 }
 
 /* general classes
