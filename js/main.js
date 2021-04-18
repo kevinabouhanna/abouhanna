@@ -1,16 +1,17 @@
 // Body styling and greeting message based on local time
 // different greeting messages based on local time
-var myDate = new Date();
-var hrs = myDate.getHours();
+const myDate = new Date();
+const helloHand = '<span class="hello"> 👋🏼</span>';
+let hrs = myDate.getHours();
 
-var greet;
+let greet;
 
 if (hrs >= 4 && hrs < 12)
-    greet = 'Good Morning' + '<span class="hello"> 👋🏼</span>';
+    greet = 'Good Morning' + helloHand;
 else if (hrs >= 12 && hrs <= 17)
-    greet = 'Good Afternoon' + '<span class="hello"> 👋🏼</span>';
+    greet = 'Good Afternoon' + helloHand;
 else
-    greet = 'Good Evening' + '<span class="hello"> 👋🏼</span>';
+    greet = 'Good Evening' + helloHand;
 
 document.getElementById('greetingHuman').innerHTML = greet;
 
