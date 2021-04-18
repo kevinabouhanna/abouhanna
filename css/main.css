@@ -139,7 +139,7 @@ a {
   position: absolute;
   width: 100vw;
   height: 25px;
-  bottom: 5px;
+  bottom: 15px;
   background: var(--background-color);
 }
 
