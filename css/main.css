@@ -98,11 +98,11 @@ a {
 }
 
 .airtable-embed {
-  background: transparent;
   box-shadow: rgb(0 0 0 / 15%) 0px 0px 0px 1px;
   height: calc(100vh - 180px);
   width: calc(100vw - 20px);
   margin: 10px;
+  background: url('../img/spinner.gif') center no-repeat;
 }
 
 /**
