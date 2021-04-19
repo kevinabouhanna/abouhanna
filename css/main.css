@@ -109,6 +109,39 @@ a {
   background: url('../img/loader-white.svg') center no-repeat;
 }
 
+/* contact classes
+     ========================================================================== */
+.wrapper {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-inner {
+  width: 100%;
+  display: grid;
+  place-content: center;
+}
+
+.contact-heading {
+  grid-row: 2/span 1;
+}
+
+.contact-social {
+  display: flex;
+}
+
+.contact-social a {
+  width: 2rem;
+  margin-right: 1.6rem;
+  font-size: 0;
+}
+
+.contact-social svg:hover,
+.dark .contact-social svg {
+  fill: var(--accent);
+}
+
 /**
    * white-label airtable mobile
    */
@@ -174,6 +207,10 @@ a {
     max-width: 1440px;
     padding-right: 10px;
     padding-left: 10px;
+  }
+
+  .wrapper {
+    padding: calc(1rem + (8 - 1) * ((100vw - 20rem)/ (100 - 20)));
   }
 }
 
