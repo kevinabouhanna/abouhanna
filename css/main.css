@@ -58,7 +58,7 @@ a {
 
 .intro-container {
   position: relative;
-  max-width: 900px;
+  max-width: 1140px;
   padding: .75em;
   margin: 0 auto;
   box-sizing: border-box;
@@ -77,11 +77,6 @@ a {
   align-items: center;
   font-size: 0.6em;
   padding-left: 15px;
-}
-
-.intro-description {
-  font-size: 0.8em;
-  margin: 10px;
 }
 
 .intro-title {
@@ -118,9 +113,9 @@ a {
 }
 
 .contact-inner {
-  width: 100%;
   display: grid;
   place-content: center;
+  padding: .75em;
 }
 
 .contact-heading {
@@ -148,7 +143,7 @@ a {
 #white-labeling-airtable {
   position: absolute;
   width: 100vw;
-  height: 25px;
+  height: 27px;
   bottom: 15px;
   background: var(--background-color);
 }
@@ -182,10 +177,6 @@ a {
     padding: 1.5em 0.75em;
   }
 
-  .intro-description {
-    margin: unset;
-  }
-
   /**
    * white-label airtable desktop
    */
@@ -211,6 +202,10 @@ a {
 
   .wrapper {
     padding: calc(1rem + (8 - 1) * ((100vw - 20rem)/ (100 - 20)));
+  }
+
+  .contact-inner {
+    width: 100%;
   }
 }
 
