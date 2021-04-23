@@ -202,11 +202,12 @@ a {
   }
 
   .wrapper {
-    padding: calc(1rem + (8 - 1) * ((100vw - 20rem)/ (100 - 20)));
+    margin: 0 auto;
   }
 
   .contact-inner {
     width: 100%;
+    padding: 4em .75em;
   }
 }
 
