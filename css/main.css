@@ -44,6 +44,11 @@ a {
   word-break: break-word;
 }
 
+.breadcrumb-container {
+  padding: 1em 0;
+  margin-left: 10px;
+}
+
 /* utility classes
      ========================================================================== */
 .cursor-pointer {
@@ -52,13 +57,23 @@ a {
 
 /* homepage classes
      ========================================================================== */
-.profile-picture-container {
-  display: none;
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  box-shadow: 0px 0px 0.3rem rgb(148 136 195 / 70%);
+  border-radius: 50%;
 }
 
 .intro-container {
   position: relative;
-  max-width: 1140px;
+  height: 90vh;
+  max-width: 800px;
   padding: .75em;
   margin: 0 auto;
   box-sizing: border-box;
@@ -159,21 +174,26 @@ a {
     font-size: 2.4em;
   }
 
-  .profile-picture-container {
-    display: block;
-    padding-right: 40px;
+  .breadcrumb-container {
+    padding: 2em 0;
+    margin-left: unset;
+  }
+
+  .profile-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 
   .profile-picture {
     width: 200px;
     height: 200px;
-    box-shadow: 0px 0px 0.3rem rgb(148 136 195 / 70%);
-    border-radius: 50%;
+    margin-right: 2em;
   }
 
   .intro-container {
-    align-items: center;
-    display: flex;
+    display: grid;
+    place-content: center;
     padding: 1.5em 0.75em;
   }
 
@@ -188,7 +208,7 @@ a {
   }
 
   .airtable-embed {
-    height: calc(100vh - 320px);
+    height: calc(100vh - 200px);
     width: 100%;
     margin: unset;
   }

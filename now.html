@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Kevin Abou Hanna</title>
+  <meta name="description"
+    content="My name is Kevin Abou Hanna I am a Frontend Web Developer and Product Designer currently working at Profit Isle">
+  <meta name="author" content="Kevin Abou Hanna">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Kevin Abou Hanna - Frontend Web Developer and Product Designer">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://abouhanna.com/">
+  <meta property="og:image" content="https://abouhanna.com/img/abouhanna.com.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+
+  <!-- components -->
+  <script src="components/footer.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+  <div class="airtable-container">
+    <div class="breadcrumb-container">
+      <a href="index.html">Go back</a>
+    </div>
+    <iframe title="My Reading List" class="airtable-embed" loading="lazy"
+      src="https://airtable.com/embed/shrevDlO7FaCTXcdp?backgroundColor=cyan&viewControls=on" frameborder="0"
+      onmousewheel=""></iframe>
+    <div id="white-labeling-airtable"></div>
+  </div>
+
+  <footer-component></footer-component>
+  <!-- Scripts -->
+  <script>
+    const myDate = new Date();
+    let hrs = myDate.getHours();
+    // add day or night class to body based on local time
+    if (document.body) {
+      if (hrs >= 4 && hrs <= 17) {
+        document.body.className = "light";
+      } else {
+        document.body.className = "dark";
+      }
+    }
+
+  </script>
+</body>
+
+</html>
