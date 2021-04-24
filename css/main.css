@@ -61,6 +61,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 1em;
 }
 
 .profile-picture {
@@ -68,9 +69,12 @@ a {
   height: 150px;
   box-shadow: 0px 0px 0.3rem rgb(148 136 195 / 70%);
   border-radius: 50%;
+  margin-bottom: 1em;
 }
 
 .intro-container {
+  display: grid;
+  place-content: center;
   position: relative;
   height: 90vh;
   max-width: 800px;
@@ -109,7 +113,7 @@ a {
 
 .airtable-embed {
   box-shadow: rgb(0 0 0 / 15%) 0px 0px 0px 1px;
-  height: calc(100vh - 180px);
+  height: calc(100vh - 100px);
   width: calc(100vw - 20px);
   margin: 10px;
   background: url('../img/loader.svg') center no-repeat;
@@ -180,20 +184,19 @@ a {
   }
 
   .profile-container {
-    display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-bottom: unset;
   }
 
   .profile-picture {
     width: 200px;
     height: 200px;
     margin-right: 2em;
+    margin-bottom: unset;
   }
 
   .intro-container {
-    display: grid;
-    place-content: center;
     padding: 1.5em 0.75em;
   }
 
