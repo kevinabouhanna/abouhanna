@@ -84,6 +84,11 @@ https://abouhanna.com/humans.txt  <---- and this is hello in my native language
       audio.play();
     }
 
+    //remove .html from url
+    var url = window.location.href;
+    url = url.split('index.html')[0];
+    window.history.replaceState(null, null, url);
+
   </script>
 
 </body>
