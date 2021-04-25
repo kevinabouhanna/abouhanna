@@ -22,7 +22,7 @@ body {
   text-rendering: optimizeLegibility;
   background: var(--background-color);
   color: var(--color);
-  opacity: 0;
+  opacity: 0.01;
   animation: fade 1s ease-in forwards 0.3s;
 }
 
@@ -238,7 +238,7 @@ a {
      ========================================================================== */
 @keyframes fade {
   from {
-    opacity: 0;
+    opacity: 0.01;
     transform: scale(0.994);
   }
 
