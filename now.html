@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Kevin Abou Hanna</title>
+  <title>My Reading List</title>
   <meta name="description"
     content="My name is Kevin Abou Hanna I am a Frontend Web Developer and Product Designer currently working at Profit Isle">
   <meta name="author" content="Kevin Abou Hanna">
@@ -41,24 +41,8 @@
 
   <footer-component></footer-component>
   <!-- Scripts -->
-  <script>
-    const myDate = new Date();
-    let hrs = myDate.getHours();
-    // add day or night class to body based on local time
-    if (document.body) {
-      if (hrs >= 4 && hrs <= 17) {
-        document.body.className = "light";
-      } else {
-        document.body.className = "dark";
-      }
-    }
+  <script src="js/main.js"></script>
 
-    //remove .html from url
-    var url = window.location.href;
-    url = url.split('.html')[0];
-    window.history.replaceState(null, null, url);
-
-  </script>
 </body>
 
 </html>
