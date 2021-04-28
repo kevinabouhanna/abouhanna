@@ -89,7 +89,7 @@ a {
 
 .hello {
   animation-name: hello-animation;
-  animation-duration: 10s;
+  animation-duration: 6s;
   animation-iteration-count: infinite;
   transform-origin: 70% 70%;
   display: inline-flex;
@@ -115,7 +115,7 @@ a {
   box-shadow: rgb(0 0 0 / 15%) 0px 0px 0px 1px;
   height: calc(100vh - 100px);
   width: calc(100vw - 20px);
-  margin: 10px;
+  margin: 0 10px;
   background: url('../img/loader.svg') center no-repeat;
 }
 
@@ -163,7 +163,7 @@ a {
   position: absolute;
   width: 100vw;
   height: 27px;
-  bottom: 15px;
+  bottom: 5px;
   background: var(--background-color);
 }
 
