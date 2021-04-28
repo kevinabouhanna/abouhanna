@@ -10,7 +10,6 @@
 }
 
 html {
-  --scrollbarBG: #ededed;
   --thumbBG: #bfbfbf;  
 }
 
@@ -23,21 +22,21 @@ body {
   color: var(--color);
   opacity: 0.01;
   animation: fade 1s ease-in forwards 0.3s;
-  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  scrollbar-color: var(--thumbBG);
 }
 
 body::-webkit-scrollbar {
-  width: 13px;
+  width: 8px;
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--scrollbarBG);
+  background: transparent;
 }
 
 body::-webkit-scrollbar-thumb {
   background-color: var(--thumbBG);
   border-radius: 50px;
-  border: 3px solid var(--scrollbarBG);
+  border: 3px solid transparent;
 }
 
 body::-webkit-scrollbar-thumb:hover {
