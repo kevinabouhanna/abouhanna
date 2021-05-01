@@ -10,7 +10,7 @@
 }
 
 html {
-  --thumbBG: #bfbfbf;  
+  --thumbBG: #bfbfbf;
 }
 
 body {
@@ -78,6 +78,10 @@ a {
   cursor: pointer;
 }
 
+.d-inline-flex {
+  display: inline-flex;
+}
+
 /* homepage classes
      ========================================================================== */
 .profile-container {
@@ -132,6 +136,18 @@ a {
   font-size: 0.8em;
   padding: 0;
   margin-right: 2px;
+}
+
+.company-external-link svg {
+  width: 0.85em;
+  padding: 5px 0 0 5px;
+}
+
+/* now.html classes
+     ========================================================================== */
+.go-back svg {
+  width: 0.85em;
+  padding: 5px 5px 0 0;
 }
 
 .airtable-embed {
