@@ -145,9 +145,26 @@ a {
 
 /* now.html classes
      ========================================================================== */
+.breadcrumb-container {
+  display: flex;
+}
+
+.go-back {
+  align-items: center;
+  white-space: nowrap;
+}
+
 .go-back svg {
   width: 0.85em;
   padding: 5px 5px 0 0;
+}
+
+.page-title {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  font-size: 22px;
+  margin: 0;
 }
 
 .airtable-embed {
@@ -249,6 +266,11 @@ a {
     height: calc(100vh - 200px);
     width: 100%;
     margin: unset;
+  }
+
+  .page-title {
+    padding-right: 5rem;
+    font-size: 1.5em
   }
 
   .airtable-container {
