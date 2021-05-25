@@ -176,10 +176,6 @@ a {
   padding: .75em;
 }
 
-.contact-heading {
-  grid-row: 2/span 1;
-}
-
 .contact-social {
   display: flex;
 }

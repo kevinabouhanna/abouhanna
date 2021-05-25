@@ -6,7 +6,7 @@ class Footer extends HTMLElement {
         this.innerHTML = `
 <section>
     <div class="contact-inner wrapper">
-      <h2 class="contact-heading">Hey there!</h2>
+      <h2 class="contact-heading">let's build something together</h2>
       <div>
         <p>I’m always up for a chat.</p>
         <p><a href="mailto:kevin@abouhanna.com">Drop me an email</a> at
