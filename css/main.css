@@ -167,7 +167,7 @@ a {
 
 .airtable-embed {
   box-shadow: rgb(0 0 0 / 15%) 0px 0px 0px 1px;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 78px);
   width: calc(100vw - 20px);
   margin: 0 10px;
   background: url('../img/loader.svg') center no-repeat;
@@ -269,7 +269,7 @@ a {
   }
 
   .airtable-embed {
-    height: calc(100vh - 200px);
+    height: calc(100vh - 175px);
     width: 100%;
     margin: unset;
   }
