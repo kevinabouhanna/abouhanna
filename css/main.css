@@ -12,6 +12,7 @@
 
 html {
   --thumbBG: #bfbfbf;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -73,6 +74,21 @@ a {
   margin-left: 10px;
 }
 
+.scroll-to-bottom {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1.5em;
+}
+
+.scroll-to-bottom a:focus {
+  outline: unset;
+}
+
+.scroll-to-bottom svg {
+  width: 1em;
+  color: #2c2c2c;
+}
+
 /* utility classes
      ========================================================================== */
 .cursor-pointer {
@@ -104,7 +120,7 @@ a {
   display: grid;
   place-content: center;
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 80px);
   max-width: 800px;
   padding: .75em;
   margin: 0 auto;
@@ -270,7 +286,7 @@ a {
   }
 
   .airtable-embed {
-    height: calc(100vh - 175px);
+    height: calc(100vh - 255px);
     width: 100%;
     margin: unset;
   }

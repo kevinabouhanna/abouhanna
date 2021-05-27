@@ -1,10 +1,10 @@
 class Footer extends HTMLElement {
-    constructor() {
-        super();
-    }
-    connectedCallback() {
-        this.innerHTML = `
-<section class="accent-bg">
+  constructor() {
+    super();
+  }
+  connectedCallback() {
+    this.innerHTML = `
+<section id="scroll" class="accent-bg">
     <div class="contact-inner wrapper">
       <h2 class="contact-heading">let's build something together</h2>
       <div>
@@ -27,7 +27,7 @@ class Footer extends HTMLElement {
     </div>
   </section>
         `;
-    }
+  }
 }
 
 customElements.define('footer-component', Footer);
