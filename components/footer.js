@@ -4,7 +4,7 @@ class Footer extends HTMLElement {
     }
     connectedCallback() {
         this.innerHTML = `
-<section>
+<section class="accent-bg">
     <div class="contact-inner wrapper">
       <h2 class="contact-heading">let's build something together</h2>
       <div>

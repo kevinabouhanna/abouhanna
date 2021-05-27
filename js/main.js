@@ -9,16 +9,17 @@ window.history.replaceState(null, null, url);
 
 const myDate = new Date();
 let hrs = myDate.getHours();
-const helloHand = '<span class="hello"> 👋🏼</span>';
+const sunEmoji = '<span>☀️</span>';
+const moonEmoji = '<span>🌑</span>'
 
 let greet;
 
 if (hrs >= 4 && hrs < 12)
-    greet = 'Good Morning' + helloHand;
+    greet = 'Good Morning' + sunEmoji;
 else if (hrs >= 12 && hrs <= 17)
-    greet = 'Good Afternoon' + helloHand;
+    greet = 'Good Afternoon' + sunEmoji;
 else
-    greet = 'Good Evening' + helloHand;
+    greet = 'Good Evening' + moonEmoji;
 
 // greeting message
 if (document.getElementById('greetingHuman') != null) {
