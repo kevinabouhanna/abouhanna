@@ -149,6 +149,7 @@ a {
 
 .go-back {
   align-items: center;
+  align-self: center;
   white-space: nowrap;
 }
 
