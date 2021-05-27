@@ -86,7 +86,7 @@ a {
 
 .scroll-to-bottom svg {
   width: 1em;
-  color: #2c2c2c;
+  color: var(--color);
 }
 
 /* utility classes
@@ -120,7 +120,7 @@ a {
   display: grid;
   place-content: center;
   position: relative;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 79px);
   max-width: 800px;
   padding: .75em;
   margin: 0 auto;
