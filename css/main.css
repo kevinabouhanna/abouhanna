@@ -123,6 +123,10 @@ a.animated-underline:hover:before {
   animation: bounce 2s infinite;
 }
 
+.bounce:hover {
+  animation: unset;
+}
+
 /* utility classes
      ========================================================================== */
 .cursor-pointer {
