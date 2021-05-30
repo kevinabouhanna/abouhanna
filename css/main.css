@@ -39,6 +39,12 @@ body {
   outline-offset: 2px;
 }
 
+/* show focus only when user is tabbing, you can find it's relevant JS code in main.js*/
+body:not(.user-is-tabbing) a:focus,
+body:not(.user-is-tabbing) button:focus {
+    outline: none;
+}
+
 /* custom scrollbar */
 body::-webkit-scrollbar {
   width: 8px;
