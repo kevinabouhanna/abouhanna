@@ -34,6 +34,12 @@ body {
   scrollbar-color: var(--thumbBG);
 }
 
+:focus {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* custom scrollbar */
 body::-webkit-scrollbar {
   width: 8px;
 }
@@ -52,11 +58,6 @@ body::-webkit-scrollbar-thumb:hover {
   background-color: #8e8e8e;
 }
 
-:focus {
-  outline: 2px solid var(--focus);
-  outline-offset: 2px;
-}
-
 /* general classes
      ========================================================================== */
 h1 {
@@ -68,6 +69,28 @@ h1 {
 a {
   color: var(--accent);
   word-break: break-word;
+  text-decoration: unset;
+}
+
+a.animated-underline {
+  position: relative;
+}
+
+a.animated-underline:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent);
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+a.animated-underline:hover:before {
+  visibility: visible;
+  width: 100%;
 }
 
 .breadcrumb-container {

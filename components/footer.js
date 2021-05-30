@@ -9,7 +9,7 @@ class Footer extends HTMLElement {
       <h2 class="contact-heading">let's build something together</h2>
       <div>
         <p>I’m always up for a chat.</p>
-        <p><a href="mailto:kevin@abouhanna.com">Drop me an email</a> at
+        <p><a class="animated-underline" href="mailto:kevin@abouhanna.com">Drop me an email</a> at
           kevin@abouhanna.com<br>or give me a shout on social media.</p>
         <div class="contact-social">
           <a href="https://github.com/kevinabouhanna" target="_blank">
