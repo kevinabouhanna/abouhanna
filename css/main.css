@@ -10,6 +10,13 @@
   --transition: 1.25s all ease;
 }
 
+.dark {
+  --background-color: #282828;
+  --color: #ccbeaf;
+  --hover-color: #282828;
+  --accent: #9488c3;
+}
+
 html {
   --thumbBG: #bfbfbf;
   scroll-behavior: smooth;
@@ -43,12 +50,6 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-thumb:hover {
   background-color: #8e8e8e;
-}
-
-.dark {
-  --background-color: #282828;
-  --color: #ccbeaf;
-  --accent: #9488c3;
 }
 
 :focus {
@@ -195,7 +196,7 @@ a {
 }
 
 .dark .airtable-embed {
-  background: url('../img/loader-white.svg') center no-repeat;
+  background: url('../img/loader-white.svg') center no-repeat
 }
 
 /* contact classes
@@ -213,7 +214,7 @@ a {
 }
 
 .contact-social {
-  display: flex;
+  display: flex
 }
 
 .contact-social a {
@@ -224,7 +225,11 @@ a {
 
 .contact-social svg:hover,
 .dark .contact-social svg {
-  fill: var(--accent);
+  fill: var(--accent)
+}
+
+.dark .contact-social svg:hover {
+  fill: var(--hover-color)
 }
 
 /**
