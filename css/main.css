@@ -258,11 +258,13 @@ a.animated-underline:hover:before {
 
 .contact-social svg:hover,
 .dark .contact-social svg {
-  fill: var(--accent)
+  fill: var(--accent);
+  transition: fill .2s ease-out;
 }
 
 .dark .contact-social svg:hover {
-  fill: var(--hover-color)
+  fill: var(--hover-color);
+  transition: fill .2s ease-out;
 }
 
 /**
