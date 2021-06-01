@@ -1,62 +1,124 @@
 <!doctype html>
-<html lang="en">
+<!--
+Hello human!
+https://abouhanna.com/humans.txt  <---- and this is hello in my native language
+-->
+<html class="no-js" lang="en-us">
 
 <head>
   <meta charset="utf-8">
-  <title>Page Not Found</title>
+  <title>Kevin Abou Hanna - Page not found</title>
+  <meta name="description"
+    content="My name is Kevin Abou Hanna I am a Frontend Web Developer and Product Designer currently working at Profit Isle">
+  <meta name="author" content="Kevin Abou Hanna">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    * {
-      line-height: 1.2;
-      margin: 0;
+
+  <meta property="og:title" content="Kevin Abou Hanna - Frontend Web Developer and Product Designer">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://abouhanna.com/">
+  <meta property="og:image" content="https://abouhanna.com/img/abouhanna.com.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-29H3491QVN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
     }
+    gtag('js', new Date());
 
-    html {
-      color: #888;
-      display: table;
-      font-family: sans-serif;
-      height: 100%;
-      text-align: center;
-      width: 100%;
-    }
+    gtag('config', 'G-29H3491QVN');
 
-    body {
-      display: table-cell;
-      vertical-align: middle;
-      margin: 2em auto;
-    }
-
-    h1 {
-      color: #555;
-      font-size: 2em;
-      font-weight: 400;
-    }
-
-    p {
-      margin: 0 auto;
-      width: 280px;
-    }
-
-    @media only screen and (max-width: 280px) {
-
-      body,
-      p {
-        width: 95%;
-      }
-
-      h1 {
-        font-size: 1.5em;
-        margin: 0 0 0.3em;
-      }
-
-    }
-  </style>
+  </script>
 </head>
 
 <body>
   <h1>Page Not Found</h1>
   <p>Sorry, but the page you were trying to view does not exist.</p>
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script>
+    // dots is an array of Dot objects,
+    // mouse is an object used to track the X and Y position
+    // of the mouse, set with a mousemove event listener below
+    var dots = [],
+      mouse = {
+        x: 0,
+        y: 0
+      };
+
+    // The Dot object used to scaffold the dots
+    var Dot = function () {
+      this.x = 0;
+      this.y = 0;
+      this.node = (function () {
+        var n = document.createElement("div");
+        n.className = "trail";
+        document.body.appendChild(n);
+        return n;
+      }());
+    };
+    // The Dot.prototype.draw() method sets the position of 
+    // the object's <div> node
+    Dot.prototype.draw = function () {
+      this.node.style.left = this.x + 10 + "px";
+      this.node.style.top = this.y + 10 + "px";
+    };
+
+    // Creates the Dot objects, populates the dots array
+    for (var i = 0; i < 12; i++) {
+      var d = new Dot();
+      dots.push(d);
+    }
+
+    // This is the screen redraw function
+    function draw() {
+      // Make sure the mouse position is set everytime
+      // draw() is called.
+      var x = mouse.x,
+        y = mouse.y;
+
+      // This loop is where all the 90s magic happens
+      dots.forEach(function (dot, index, dots) {
+        var nextDot = dots[index + 1] || dots[0];
+
+        dot.x = x;
+        dot.y = y;
+        dot.draw();
+        x += (nextDot.x - dot.x) * .7;
+        y += (nextDot.y - dot.y) * .7;
+
+      });
+    }
+
+    addEventListener("mousemove", function (event) {
+      //event.preventDefault();
+      mouse.x = event.pageX;
+      mouse.y = event.pageY;
+    });
+
+    // animate() calls draw() then recursively calls itself
+    // everytime the screen repaints via requestAnimationFrame().
+    function animate() {
+      draw();
+      requestAnimationFrame(animate);
+    }
+
+    // And get it started by calling animate().
+    animate();
+
+  </script>
 </body>
 
 </html>
-<!-- IE needs 512+ bytes: https://docs.microsoft.com/archive/blogs/ieinternals/friendly-http-error-pages -->
