@@ -283,10 +283,12 @@ a.animated-underline:hover:before {
    */
 #white-labeling-airtable {
   position: absolute;
-  width: 100vw;
+  width: calc(100vw - 20px);
   height: 27px;
+  left: 10px;
   bottom: 5px;
   background: var(--background-color);
+  border-top: 1px solid #cacaca;
 }
 
 .accent-bg {
@@ -337,7 +339,7 @@ a.animated-underline:hover:before {
     width: 1442px;
     height: 25px;
     bottom: 9px;
-    left: 9px;
+    left: 9px
   }
 
   .airtable-embed {
