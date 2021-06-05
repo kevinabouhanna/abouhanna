@@ -39,21 +39,21 @@ body {
   outline-offset: 2px;
 }
 
-.trail { /* className for the trail elements */
-    position: absolute;
-    width: 3.75rem;
-    height: 3.75rem;
-    margin-top: -30px;
-    margin-left: -30px;
-    background-size: cover;
-    background: url(../img/emoji-trail.png) no-repeat;
-    pointer-events: none;
-  }
+.trail {
+  position: absolute;
+  width: 3.75rem;
+  height: 3.75rem;
+  margin-top: -30px;
+  margin-left: -30px;
+  background-size: cover;
+  background: url(../img/emoji-trail.png) no-repeat;
+  pointer-events: none;
+}
 
 /* show focus only when user is tabbing, you can find it's relevant JS code in main.js*/
 body:not(.user-is-tabbing) a:focus,
 body:not(.user-is-tabbing) button:focus {
-    outline: none;
+  outline: none;
 }
 
 /* custom scrollbar */
