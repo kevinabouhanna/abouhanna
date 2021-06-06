@@ -34,6 +34,10 @@ body {
   scrollbar-color: var(--thumbBG);
 }
 
+::selection {
+  background: var(--accent-bg); /* WebKit/Blink Browsers */
+}
+
 :focus {
   outline: 2px solid var(--focus);
   outline-offset: 2px;
