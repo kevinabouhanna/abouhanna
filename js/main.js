@@ -18,13 +18,14 @@ window.history.replaceState(null, null, url);
 
 const myDate = new Date();
 let hrs = myDate.getHours();
+const sunFlowerEmoji = '<span>🌻</span>'
 const sunEmoji = '<span>☀️</span>';
 const moonEmoji = '<span>🌑</span>'
 
 let greet;
 
 if (hrs >= 4 && hrs < 12)
-    greet = 'Good Morning' + sunEmoji;
+    greet = 'Good Morning' + sunFlowerEmoji;
 else if (hrs >= 12 && hrs <= 17)
     greet = 'Good Afternoon' + sunEmoji;
 else
