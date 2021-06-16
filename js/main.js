@@ -1,18 +1,18 @@
 // show focus only when user is tabbing, you can find it's relevant CSS code in main.css
 function handleFirstTab(e) {
-	if (e.keyCode === 9) { // the "I am a keyboard user" key
-		document.body.classList.add('user-is-tabbing');
-		window.removeEventListener('keydown', handleFirstTab);
-	}
+    if (e.keyCode === 9) { // the "I am a keyboard user" key
+        document.body.classList.add('user-is-tabbing');
+        window.removeEventListener('keydown', handleFirstTab);
+    }
 }
 window.addEventListener('keydown', handleFirstTab);
 
 // remove .html from url
 var url = window.location.href;
 if (url.indexOf('/index.html') > -1) {
-    url = url.replace('index.html','');
+    url = url.replace('index.html', '');
 } else {
-    url = url.replace('.html','');
+    url = url.replace('.html', '');
 }
 window.history.replaceState(null, null, url);
 
