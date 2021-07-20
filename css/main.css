@@ -50,7 +50,7 @@ body {
   margin-top: -30px;
   margin-left: -30px;
   background-size: cover;
-  background: url(../img/emoji-trail.png) no-repeat;
+  background: url(../images/emoji-trail.png) no-repeat;
   pointer-events: none;
 }
 
@@ -240,11 +240,11 @@ a.animated-underline:hover:before {
   height: calc(100vh - 78px);
   width: calc(100vw - 20px);
   margin: 0 10px;
-  background: url('../img/loader.svg') center no-repeat;
+  background: url('../images/loader.svg') center no-repeat;
 }
 
 .dark .airtable-embed {
-  background: url('../img/loader-white.svg') center no-repeat
+  background: url('../images/loader-white.svg') center no-repeat
 }
 
 /* contact classes
