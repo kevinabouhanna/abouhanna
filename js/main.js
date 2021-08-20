@@ -7,15 +7,6 @@ function handleFirstTab(e) {
 }
 window.addEventListener('keydown', handleFirstTab);
 
-// remove .html from url
-// var url = window.location.href;
-// if (url.indexOf('/index.html') > -1) {
-//     url = url.replace('index.html', '');
-// } else {
-//     url = url.replace('.html', '');
-// }
-// window.history.replaceState(null, null, url);
-
 const myDate = new Date();
 let hrs = myDate.getHours();
 const sunFlowerEmoji = '<span>🌻</span>'
