@@ -12,7 +12,7 @@ Although the source for this site is available, it **is not licensed for re-use*
 
 You are welcome to refer to the source for learning, and even take small (single-file) snippets of code for your own projects. You are not permitted to re-create this website using the source code available.
 
-The design is copyrighted and all rights reserved by Alistair Shepherd.
+The design is copyrighted and all rights reserved by Kevin Abou Hanna.
 
 ## License
 
