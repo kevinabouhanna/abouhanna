@@ -1,7 +1,7 @@
 {
-  "name": " ",
+  "name": "kevin_abou_hanna",
   "version": "0.0.1",
-  "description": "",
+  "description": "Kevin Abou Hanna - Product Designer and Frontend Developer",
   "keywords": "",
   "license": "",
   "author": "",
@@ -12,6 +12,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.5"
   }
 }
