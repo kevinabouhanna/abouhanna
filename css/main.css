@@ -156,16 +156,6 @@ a.animated-underline:hover:before {
   animation: unset;
 }
 
-/* utility classes
-     ========================================================================== */
-.cursor-pointer {
-  cursor: pointer;
-}
-
-.d-inline-flex {
-  display: inline-flex;
-}
-
 /* homepage classes
      ========================================================================== */
 .profile-container {

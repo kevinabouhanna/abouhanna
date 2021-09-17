@@ -1,0 +1,13 @@
+/* utility classes
+     ========================================================================== */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-inline-flex {
+  display: inline-flex;
+}
