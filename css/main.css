@@ -87,10 +87,24 @@ h1 {
   margin: 0;
 }
 
-a {
+/* link */
+/* Based on LoVe/HAte css specificity rule */
+a:link {
   color: var(--accent);
   word-break: break-word;
   text-decoration: unset;
+}
+
+a:visited {
+  color: var(--accent); /* TODO: change color */
+}
+
+a:hover {
+  color: var(--accent); /* TODO: change color */
+}
+
+a:active {
+  color: var(--accent); /* TODO: change color */
 }
 
 a.animated-underline {
