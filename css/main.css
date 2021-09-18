@@ -8,13 +8,19 @@
   --focus: #2d7ff9;
   --font: 1.2rem/1.53 'IBM Plex Serif', 'Georgia', serif;
   --transition: 1.25s all ease;
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
 }
 
 .dark {
   --background-color: #282828;
   --color: #ccbeaf;
   --hover-color: #282828;
-  --accent: #9488c3;
 }
 
 html {
@@ -35,7 +41,8 @@ body {
 }
 
 ::selection {
-  background: var(--accent-bg); /* WebKit/Blink Browsers */
+  background: var(--accent-bg);
+  /* WebKit/Blink Browsers */
 }
 
 :focus {
@@ -45,8 +52,8 @@ body {
 
 .trail {
   position: absolute;
-  width: 3.75rem;
-  height: 3.75rem;
+  width: 3.75em;
+  height: 3.75em;
   margin-top: -30px;
   margin-left: -30px;
   background-size: cover;
@@ -96,15 +103,18 @@ a:link {
 }
 
 a:visited {
-  color: var(--accent); /* TODO: change color */
+  color: var(--accent);
+  /* TODO: change color */
 }
 
 a:hover {
-  color: var(--accent); /* TODO: change color */
+  color: var(--accent);
+  /* TODO: change color */
 }
 
 a:active {
-  color: var(--accent); /* TODO: change color */
+  color: var(--accent);
+  /* TODO: change color */
 }
 
 a.animated-underline {
@@ -181,7 +191,6 @@ a.animated-underline:hover:before {
   max-width: 800px;
   padding: .75em;
   margin: 0 auto;
-  box-sizing: border-box;
 }
 
 .airtable-container {
