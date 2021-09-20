@@ -62,8 +62,8 @@ body {
 }
 
 /* show focus only when user is tabbing, you can find it's relevant JS code in main.js*/
-body:not(.user-is-tabbing) a:focus,
-body:not(.user-is-tabbing) button:focus {
+body:not(.user__is__tabbing) a:focus,
+body:not(.user__is__tabbing) button:focus {
   outline: none;
 }
 
@@ -117,11 +117,11 @@ a:active {
   /* TODO: change color */
 }
 
-a.animated-underline {
+a.animated__underline {
   position: relative;
 }
 
-a.animated-underline:before {
+a.animated__underline:before {
   content: "";
   position: absolute;
   width: 0;
@@ -133,27 +133,27 @@ a.animated-underline:before {
   transition: all 0.2s ease-in-out;
 }
 
-a.animated-underline:hover:before {
+a.animated__underline:hover:before {
   visibility: visible;
   width: 100%;
 }
 
-.breadcrumb-container {
+.breadcrumb__container {
   padding: 1em 0;
   margin-left: 10px;
 }
 
-.scroll-to-bottom {
+.scroll__to__bottom {
   display: flex;
   justify-content: center;
   padding-bottom: 1.5em;
 }
 
-.scroll-to-bottom a:focus {
+.scroll__to__bottom a:focus {
   outline: unset;
 }
 
-.scroll-to-bottom svg {
+.scroll__to__bottom svg {
   width: 1em;
   color: var(--color);
 }
@@ -168,14 +168,14 @@ a.animated-underline:hover:before {
 
 /* homepage classes
      ========================================================================== */
-.profile-container {
+.profile__container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 1em;
 }
 
-.profile-picture {
+.profile__picture {
   width: 150px;
   height: 150px;
   box-shadow: 0px 0px 0.3rem rgb(148 136 195 / 70%);
@@ -183,7 +183,7 @@ a.animated-underline:hover:before {
   margin-bottom: 1em;
 }
 
-.intro-container {
+.intro__container {
   display: grid;
   place-content: center;
   position: relative;
@@ -193,16 +193,16 @@ a.animated-underline:hover:before {
   margin: 0 auto;
 }
 
-.airtable-container {
+.airtable__container {
   position: relative
 }
 
-.intro-title {
+.intro__title {
   display: flex;
   justify-content: center;
 }
 
-.intro-title>span {
+.intro__title>span {
   font-size: 0.6em;
   display: flex;
   align-self: center;
@@ -210,7 +210,7 @@ a.animated-underline:hover:before {
   padding-top: 0.25em;
 }
 
-.speaker-high-volume {
+.speaker__high__volume {
   background: unset;
   border: unset;
   font-size: 0.8em;
@@ -218,29 +218,29 @@ a.animated-underline:hover:before {
   margin-right: 2px;
 }
 
-.company-external-link svg {
+.company__external__link svg {
   width: 0.85em;
   padding: 5px 0 0 5px;
 }
 
 /* now.html classes
      ========================================================================== */
-.breadcrumb-container {
+.breadcrumb__container {
   display: flex;
 }
 
-.go-back {
+.go__back {
   align-items: center;
   align-self: center;
   white-space: nowrap;
 }
 
-.go-back svg {
-  width: 0.5em;
+.go__back svg {
+  width: 0.75em;
   padding: 5px 8px 0 0;
 }
 
-.page-title {
+.page__title {
   width: 100%;
   justify-content: center;
   display: flex;
@@ -248,7 +248,7 @@ a.animated-underline:hover:before {
   margin: 0;
 }
 
-.airtable-embed {
+.airtable__embed {
   box-shadow: rgb(0 0 0 / 15%) 0px 0px 0px 1px;
   height: calc(100vh - 78px);
   width: calc(100vw - 20px);
@@ -256,7 +256,7 @@ a.animated-underline:hover:before {
   background: url('../images/loader.svg') center no-repeat;
 }
 
-.dark .airtable-embed {
+.dark .airtable__embed {
   background: url('../images/loader-white.svg') center no-repeat
 }
 
@@ -268,33 +268,33 @@ a.animated-underline:hover:before {
   margin-right: auto;
 }
 
-.contact-inner {
+.contact__inner {
   display: grid;
   place-content: center;
   padding: .75em;
 }
 
-.contact-social {
+.contact__social {
   display: flex
 }
 
-.contact-social a {
+.contact__social a {
   width: 2rem;
   margin-right: 1.6rem;
   font-size: 0;
 }
 
-.contact-social .github-icon {
+.contact__social .github__icon {
   padding-top: 0.2rem;
 }
 
-.contact-social svg:hover,
-.dark .contact-social svg {
+.contact__social svg:hover,
+.dark .contact__social svg {
   fill: var(--accent);
   transition: fill .2s ease-out;
 }
 
-.dark .contact-social svg:hover {
+.dark .contact__social svg:hover {
   fill: var(--hover-color);
   transition: fill .2s ease-out;
 }
@@ -302,7 +302,7 @@ a.animated-underline:hover:before {
 /**
    * white-label airtable mobile
    */
-#white-labeling-airtable {
+#white__labeling__airtable {
   position: absolute;
   width: calc(100vw - 18px);
   height: 27px;
@@ -312,86 +312,12 @@ a.animated-underline:hover:before {
   border-top: 1px solid #cacaca;
 }
 
-.dark #white-labeling-airtable {
+.dark #white__labeling__airtable {
   border-top: 1px solid #222;
 }
 
-.accent-bg {
+.accent__bg {
   background: var(--accent-bg);
-}
-
-/* desktop styles
-     ========================================================================== */
-@media screen and (min-width: 600px) {
-  :root {
-    --font: 1.6rem/1.63 'IBM Plex Serif', 'Georgia', serif;
-  }
-
-  h1 {
-    font-size: 2.2em;
-  }
-
-  .intro-description {
-    margin: 2em 0;
-  }
-
-  .breadcrumb-container {
-    padding: 2em 0;
-    margin-left: unset;
-  }
-
-  .profile-container {
-    flex-direction: row;
-    justify-content: center;
-    padding-bottom: unset;
-  }
-
-  .profile-picture {
-    width: 200px;
-    height: 200px;
-    margin-right: 2em;
-    margin-bottom: unset;
-  }
-
-  .intro-container {
-    padding: 1.5em 0.75em;
-  }
-
-  /**
-   * white-label airtable desktop
-   */
-  #white-labeling-airtable {
-    width: 1442px;
-    height: 25px;
-    bottom: 9px;
-  }
-
-  .airtable-embed {
-    height: calc(100vh - 255px);
-    width: 100%;
-    margin: unset;
-  }
-
-  .page-title {
-    padding-right: 5rem;
-    font-size: 1.5em
-  }
-
-  .airtable-container {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1440px;
-    padding-right: 10px;
-    padding-left: 10px;
-  }
-
-  .wrapper {
-    margin: 0 auto;
-  }
-
-  .contact-inner {
-    padding: 4em .75em;
-  }
 }
 
 /* animations
@@ -424,5 +350,79 @@ a.animated-underline:hover:before {
 
   60% {
     transform: translateY(-4px);
+  }
+}
+
+/* desktop styles
+     ========================================================================== */
+@media screen and (min-width: 600px) {
+  :root {
+    --font: 1.6rem/1.63 'IBM Plex Serif', 'Georgia', serif;
+  }
+
+  h1 {
+    font-size: 2.2em;
+  }
+
+  .intro__description {
+    margin: 2em 0;
+  }
+
+  .breadcrumb__container {
+    padding: 2em 0;
+    margin-left: unset;
+  }
+
+  .profile__container {
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: unset;
+  }
+
+  .profile__picture {
+    width: 200px;
+    height: 200px;
+    margin-right: 2em;
+    margin-bottom: unset;
+  }
+
+  .intro__container {
+    padding: 1.5em 0.75em;
+  }
+
+  /**
+   * white-label airtable desktop
+   */
+  #white__labeling__airtable {
+    width: 1442px;
+    height: 25px;
+    bottom: 9px;
+  }
+
+  .airtable__embed {
+    height: calc(100vh - 255px);
+    width: 100%;
+    margin: unset;
+  }
+
+  .page__title {
+    padding-right: 5rem;
+    font-size: 1.5em
+  }
+
+  .airtable__container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1440px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .wrapper {
+    margin: 0 auto;
+  }
+
+  .contact__inner {
+    padding: 4em .75em;
   }
 }
