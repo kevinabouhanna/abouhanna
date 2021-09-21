@@ -50,15 +50,8 @@ body {
   outline-offset: 2px;
 }
 
-.trail {
-  position: absolute;
-  width: 3.75em;
-  height: 3.75em;
-  margin-top: -30px;
-  margin-left: -30px;
-  background-size: cover;
-  background: url(../images/emoji-trail.png) no-repeat;
-  pointer-events: none;
+img {
+  max-width: 100%
 }
 
 /* show focus only when user is tabbing, you can find it's relevant JS code in main.js*/
@@ -318,6 +311,17 @@ a.animated__underline:hover:before {
 
 .accent__bg {
   background: var(--accent-bg);
+}
+
+.trail {
+  position: absolute;
+  width: 3.75em;
+  height: 3.75em;
+  margin-top: -30px;
+  margin-left: -30px;
+  background-size: cover;
+  background: url(../images/emoji-trail.png) no-repeat;
+  pointer-events: none;
 }
 
 /* animations
