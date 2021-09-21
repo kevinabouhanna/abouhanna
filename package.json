@@ -2,7 +2,12 @@
   "name": "kevin_abou_hanna",
   "version": "0.0.1",
   "description": "Kevin Abou Hanna - Product Designer and Frontend Developer",
-  "keywords": "",
+  "keywords": [
+    "CSS",
+    "HTML",
+    "DSP",
+    "Minimal portfolio"
+  ],
   "license": "",
   "author": "",
   "scripts": {
