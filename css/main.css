@@ -126,27 +126,6 @@ a:active {
   /* TODO: change color */
 }
 
-a.animated__underline {
-  position: relative;
-}
-
-a.animated__underline:before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: var(--accent);
-  visibility: hidden;
-  transition: all 0.2s ease-in-out;
-}
-
-a.animated__underline:hover:before {
-  visibility: visible;
-  width: 100%;
-}
-
 .breadcrumb__container {
   padding: 1em 0;
   margin-left: 10px;
@@ -247,7 +226,7 @@ a.animated__underline:hover:before {
 }
 
 .go__back svg {
-  width: 0.75em;
+  width: 0.95em;
   padding: 5px 8px 0 0;
 }
 
@@ -376,6 +355,24 @@ a.animated__underline:hover:before {
   :root {
     --font: 1.6rem/1.63 'IBM Plex Serif', 'Georgia', serif;
   }
+  a.animated__underline {
+    position: relative;
+  }
+  a.animated__underline:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent);
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+  }
+  a.animated__underline:hover:before {
+    visibility: visible;
+    width: 100%;
+  }
   h1 {
     font-size: 2.2em;
   }
@@ -399,6 +396,13 @@ a.animated__underline:hover:before {
   }
   .intro__container {
     padding: 1.5em 0.75em;
+  }
+  .go__back::after {
+    content: "Go back";
+    position: static;
+  }
+  .go__back svg {
+    width: 0.75em;
   }
   /**
    * white-label airtable desktop
