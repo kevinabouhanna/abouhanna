@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;700&display=swap');
-
 :root {
   --background-color: #ededed;
   --color: #2b2b2b;
@@ -11,9 +10,7 @@
   box-sizing: border-box;
 }
 
-*,
-::before,
-::after {
+*, ::before, ::after {
   box-sizing: inherit;
 }
 
@@ -54,13 +51,29 @@ img {
   max-width: 100%
 }
 
+/* and the class clearfix to an element to force it to contain its floated contents (this is used as a fallback for browser that don't support flex and grid */
+
+.float-left {
+  float: left
+}
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both
+}
+
 /* show focus only when user is tabbing, you can find it's relevant JS code in main.js*/
-body:not(.user__is__tabbing) a:focus,
-body:not(.user__is__tabbing) button:focus {
+
+body:not(.user__is__tabbing) a:focus, body:not(.user__is__tabbing) button:focus {
   outline: none;
 }
 
 /* custom scrollbar */
+
 body::-webkit-scrollbar {
   width: 8px;
 }
@@ -81,6 +94,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 /* general classes
      ========================================================================== */
+
 h1 {
   font-size: 1.5em;
   color: var(--accent);
@@ -88,7 +102,9 @@ h1 {
 }
 
 /* link */
+
 /* Based on LoVe/HAte css specificity rule */
+
 a:link {
   color: var(--accent);
   word-break: break-word;
@@ -161,6 +177,7 @@ a.animated__underline:hover:before {
 
 /* homepage classes
      ========================================================================== */
+
 .profile__container {
   display: flex;
   flex-direction: column;
@@ -218,6 +235,7 @@ a.animated__underline:hover:before {
 
 /* now.html classes
      ========================================================================== */
+
 .breadcrumb__container {
   display: flex;
 }
@@ -255,6 +273,7 @@ a.animated__underline:hover:before {
 
 /* contact classes
      ========================================================================== */
+
 .wrapper {
   max-width: 80rem;
   margin-left: auto;
@@ -281,8 +300,7 @@ a.animated__underline:hover:before {
   padding-top: 0.2rem;
 }
 
-.contact__social svg:hover,
-.dark .contact__social svg {
+.contact__social svg:hover, .dark .contact__social svg {
   fill: var(--accent);
   transition: fill .2s ease-out;
 }
@@ -295,6 +313,7 @@ a.animated__underline:hover:before {
 /**
    * white-label airtable mobile
    */
+
 #white__labeling__airtable {
   position: absolute;
   width: calc(100vw - 18px);
@@ -326,12 +345,12 @@ a.animated__underline:hover:before {
 
 /* animations
      ========================================================================== */
+
 @keyframes fade {
   from {
     opacity: 0.01;
     transform: scale(0.994);
   }
-
   to {
     opacity: 1;
     transform: scale(1);
@@ -339,19 +358,12 @@ a.animated__underline:hover:before {
 }
 
 @keyframes bounce {
-
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
+  0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
   }
-
   40% {
     transform: translateY(-8px);
   }
-
   60% {
     transform: translateY(-4px);
   }
@@ -359,41 +371,35 @@ a.animated__underline:hover:before {
 
 /* desktop styles
      ========================================================================== */
+
 @media screen and (min-width: 600px) {
   :root {
     --font: 1.6rem/1.63 'IBM Plex Serif', 'Georgia', serif;
   }
-
   h1 {
     font-size: 2.2em;
   }
-
   .intro__description {
     margin: 2em 0;
   }
-
   .breadcrumb__container {
     padding: 2em 0;
     margin-left: unset;
   }
-
   .profile__container {
     flex-direction: row;
     justify-content: center;
     padding-bottom: unset;
   }
-
   .profile__picture {
     width: 200px;
     height: 200px;
     margin-right: 2em;
     margin-bottom: unset;
   }
-
   .intro__container {
     padding: 1.5em 0.75em;
   }
-
   /**
    * white-label airtable desktop
    */
@@ -402,18 +408,15 @@ a.animated__underline:hover:before {
     height: 25px;
     bottom: 9px;
   }
-
   .airtable__embed {
     height: calc(100vh - 255px);
     width: 100%;
     margin: unset;
   }
-
   .page__title {
     padding-right: 5rem;
     font-size: 1.5em
   }
-
   .airtable__container {
     margin-right: auto;
     margin-left: auto;
@@ -421,11 +424,9 @@ a.animated__underline:hover:before {
     padding-right: 10px;
     padding-left: 10px;
   }
-
   .wrapper {
     margin: 0 auto;
   }
-
   .contact__inner {
     padding: 4em .75em;
   }

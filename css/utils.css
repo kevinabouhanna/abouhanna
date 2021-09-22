@@ -1,13 +1,13 @@
 /* utility classes
      ========================================================================== */
-.cursor__pointer {
+.cursor-pointer {
   cursor: pointer;
 }
 
-.d__flex {
+.d-flex {
     display: flex;
 }
 
-.d__inline__flex {
+.d-inline-flex {
   display: inline-flex;
 }
