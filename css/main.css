@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;700&display=swap');
 :root {
-  --background-color: #ededed;
-  --color: #2b2b2b;
-  --accent: #9488c3;
-  --accent-bg: #9488c340;
-  --focus: #2d7ff9;
+  --background-color: hsl(0, 0%, 93%);
+  --color: hsl(0, 0%, 17%);
+  --accent: hsl(252, 33%, 65%);
+  --accent-bg: hsl(253, 10%, 28%);
+  --focus: hsl(216, 94%, 58%);
   --font: 1.2rem/1.53 'IBM Plex Serif', 'Georgia', serif;
   --transition: 1.25s all ease;
   box-sizing: border-box;
@@ -30,7 +30,7 @@ body {
   font: var(--font);
   font-feature-settings: 'case', 'calt', 'tnum', 'ss01', 'zero';
   text-rendering: optimizeLegibility;
-  background: var(--background-color);
+  background-color: var(--background-color);
   color: var(--color);
   opacity: 0.01;
   animation: fade 1s ease-in forwards 0.3s;
@@ -40,7 +40,7 @@ body {
 }
 
 ::selection {
-  background: var(--accent-bg);
+  background-color: var(--accent-bg);
   /* WebKit/Blink Browsers */
 }
 
@@ -303,7 +303,7 @@ a:active {
   height: 27px;
   left: 9px;
   bottom: 5px;
-  background: var(--background-color);
+  background-color: var(--background-color);
   border-top: 1px solid #cacaca;
 }
 
@@ -312,7 +312,7 @@ a:active {
 }
 
 .accent__bg {
-  background: var(--accent-bg);
+  background-color: var(--accent-bg);
 }
 
 .trail {
