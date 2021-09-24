@@ -35,6 +35,8 @@ body {
   opacity: 0.01;
   animation: fade 1s ease-in forwards 0.3s;
   scrollbar-color: var(--thumbBG);
+  line-height: 1.5;
+  letter-spacing: 0.01em;
 }
 
 ::selection {
@@ -95,6 +97,10 @@ body::-webkit-scrollbar-thumb:hover {
 /* general classes
      ========================================================================== */
 
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.01em;
+}
+
 h1 {
   font-size: 1.5em;
   color: var(--accent);
@@ -104,25 +110,23 @@ h1 {
 /* link */
 
 /* Based on LoVe/HAte css specificity rule */
-
 a:link {
-  color: var(--accent);
+  color: var(--color);
   word-break: break-word;
-  text-decoration: unset;
 }
 
 a:visited {
-  color: var(--accent);
+  color: var(--color);
   /* TODO: change color */
 }
 
 a:hover {
-  color: var(--accent);
+  color: var(--color);
   /* TODO: change color */
 }
 
 a:active {
-  color: var(--accent);
+  color: var(--color);
   /* TODO: change color */
 }
 
@@ -176,7 +180,7 @@ a:active {
   display: grid;
   place-content: center;
   position: relative;
-  height: calc(100vh - 79px);
+  height: calc(100vh - 76px);
   max-width: 800px;
   padding: .75em;
   margin: 0 auto;
@@ -354,24 +358,6 @@ a:active {
 @media screen and (min-width: 600px) {
   :root {
     --font: 1.6rem/1.63 'IBM Plex Serif', 'Georgia', serif;
-  }
-  a.animated__underline {
-    position: relative;
-  }
-  a.animated__underline:before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--accent);
-    visibility: hidden;
-    transition: all 0.2s ease-in-out;
-  }
-  a.animated__underline:hover:before {
-    visibility: visible;
-    width: 100%;
   }
   h1 {
     font-size: 2.2em;
