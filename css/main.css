@@ -5,7 +5,7 @@
   --accent: hsl(252, 33%, 65%);
   --accent-bg: hsl(253, 10%, 28%);
   --focus: hsl(216, 94%, 58%);
-  --font: 1.2rem/1.53 'IBM Plex Serif', 'Georgia', serif;
+  --font: 1.2rem/1.53 'IBM Plex Serif', 'sans-serif', serif;
   --transition: 1.25s all ease;
   box-sizing: border-box;
 }
@@ -15,9 +15,9 @@
 }
 
 .dark {
-  --background-color: #282828;
-  --color: #ccbeaf;
-  --hover-color: #282828;
+  --background-color: hsl(0, 0%, 17%);
+  --color: hsl(31, 22%, 74%);
+  --hover-color: hsl(0, 0%, 17%);
 }
 
 html {
@@ -357,7 +357,7 @@ a:active {
 
 @media screen and (min-width: 600px) {
   :root {
-    --font: 1.6rem/1.63 'IBM Plex Serif', 'Georgia', serif;
+    --font: 1.6rem/1.63 'IBM Plex Serif', 'sans-serif', serif;
   }
   h1 {
     font-size: 2.2em;
