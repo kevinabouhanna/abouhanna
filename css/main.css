@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;700&display=swap');
 :root {
   --background-color: hsl(0, 0%, 93%);
-  --color: hsl(0, 0%, 17%);
+  --text-color: hsl(0, 0%, 17%);
   --accent: hsl(252, 33%, 65%);
   --accent-bg: hsl(253, 10%, 28%);
   --focus: hsl(216, 94%, 58%);
@@ -16,7 +16,7 @@
 
 .dark {
   --background-color: hsl(0, 0%, 17%);
-  --color: hsl(31, 22%, 74%);
+  --text-color: hsl(31, 22%, 74%);
   --hover-color: hsl(0, 0%, 17%);
 }
 
@@ -31,7 +31,7 @@ body {
   font-feature-settings: 'case', 'calt', 'tnum', 'ss01', 'zero';
   text-rendering: optimizeLegibility;
   background-color: var(--background-color);
-  color: var(--color);
+  color: var(--text-color);
   opacity: 0.01;
   animation: fade 1s ease-in forwards 0.3s;
   scrollbar-color: var(--thumbBG);
@@ -111,22 +111,22 @@ h1 {
 
 /* Based on LoVe/HAte css specificity rule */
 a:link {
-  color: var(--color);
+  color: var(--text-color);
   word-break: break-word;
 }
 
 a:visited {
-  color: var(--color);
+  color: var(--text-color);
   /* TODO: change color */
 }
 
 a:hover {
-  color: var(--color);
+  color: var(--text-color);
   /* TODO: change color */
 }
 
 a:active {
-  color: var(--color);
+  color: var(--text-color);
   /* TODO: change color */
 }
 
@@ -147,7 +147,7 @@ a:active {
 
 .scroll__to__bottom svg {
   width: 1em;
-  color: var(--color);
+  color: var(--text-color);
 }
 
 .bounce {
