@@ -394,9 +394,9 @@ a:active {
    * white-label airtable desktop
    */
   #white__labeling__airtable {
-    width: 1442px;
+    width: calc(100% - 17px);
     height: 25px;
-    bottom: 9px;
+    bottom: 7px;
   }
   .airtable__embed {
     height: calc(100vh - 255px);

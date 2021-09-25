@@ -3,6 +3,7 @@
 # Useful .gitignore templates: https://github.com/github/gitignore
 node_modules
 dist
+build
 .cache
 .assets
 .env

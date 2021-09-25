@@ -2,21 +2,31 @@
   "name": "kevin_abou_hanna",
   "version": "1.0.3",
   "description": "Kevin Abou Hanna - Product Designer and Frontend Developer",
+  "repository": "github:kevinabouhanna/abouhanna",
+  "homepage": "https://abouhanna.com",
   "keywords": [
     "CSS",
     "HTML",
     "DSP",
     "Minimal portfolio"
   ],
-  "license": "",
-  "author": "",
+  "license": "MIT",
+  "author": "Kevin Abou Hanna",
+  "browserslist": ">0.75%, not ie 11, not UCAndroid >0, not OperaMini all",
   "scripts": {
-    "build": "parcel build index.html",
-    "dev": "parcel index.html --open",
-    "start": "npm run build && npm run dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "snowpack dev",
+    "build": "snowpack build"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.5"
+    "snowpack": "^3.8.8",
+    "@snowpack/plugin-babel": "^2.1.6",
+    "@babel/preset-env": "^7.12.11",
+    "@snowpack/plugin-postcss": "^1.4.3",
+    "postcss": "^8.3.8",
+    "postcss-cli": "8.3.1",
+    "postcss-easings": "^3.0.1",
+    "postcss-import": "^14.0.0",
+    "postcss-import-url": "^6.0.0",
+    "postcss-preset-env": "6.7.0"
   }
 }
