@@ -2,7 +2,7 @@
 :root {
   --background-color: hsl(0, 0%, 93%);
   --text-color: hsl(250deg 30% 20%);
-  --accent: hsl(252, 33%, 65%);
+  --accent: hsl(252deg 42% 62%);
   --accent-bg: hsl(253, 19%, 86%);
   --focus: hsl(216, 94%, 58%);
   --font: 1.2rem/1.53 'IBM Plex Serif', 'sans-serif', serif;
