@@ -6,7 +6,7 @@
   --accent-bg: hsl(253, 19%, 86%);
   --focus: hsl(216, 94%, 58%);
   --font: 1.2rem/1.53 'IBM Plex Serif', 'sans-serif', serif;
-  --transition: 1.25s all ease;
+  --transition: .5s all ease;
   box-sizing: border-box;
 }
 
