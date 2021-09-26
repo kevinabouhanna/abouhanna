@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;700&display=swap');
 :root {
   --background-color: hsl(0, 0%, 93%);
-  --text-color: hsl(0, 0%, 17%);
+  --text-color: hsl(250deg 30% 20%);
   --accent: hsl(252, 33%, 65%);
   --accent-bg: hsl(253, 19%, 86%);
   --focus: hsl(216, 94%, 58%);
@@ -18,7 +18,7 @@
   --accent-bg: hsl(253, 10%, 28%);
   --background-color: hsl(0, 0%, 17%);
   --text-color: hsl(31, 22%, 74%);
-  --hover-color: hsl(0, 0%, 17%);
+  --hover-color: hsl(250deg 30% 20%);
 }
 
 html {
@@ -41,7 +41,7 @@ body {
 }
 
 ::selection {
-  background-color: var(--accent-bg);
+  background-color: hsl(252, 28%, 85%);
   /* WebKit/Blink Browsers */
 }
 
