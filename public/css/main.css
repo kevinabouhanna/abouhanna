@@ -3,7 +3,7 @@
   --background-color: hsl(0, 0%, 93%);
   --text-color: hsl(0, 0%, 17%);
   --accent: hsl(252, 33%, 65%);
-  --accent-bg: hsl(253, 10%, 28%);
+  --accent-bg: hsl(253, 19%, 86%);
   --focus: hsl(216, 94%, 58%);
   --font: 1.2rem/1.53 'IBM Plex Serif', 'sans-serif', serif;
   --transition: 1.25s all ease;
@@ -15,6 +15,7 @@
 }
 
 .dark {
+  --accent-bg: hsl(253, 10%, 28%);
   --background-color: hsl(0, 0%, 17%);
   --text-color: hsl(31, 22%, 74%);
   --hover-color: hsl(0, 0%, 17%);
