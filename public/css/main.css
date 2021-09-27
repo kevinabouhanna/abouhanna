@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;700&display=swap');
 :root {
   --background-color: hsl(0, 0%, 93%);
-  --text-color: hsl(250deg 30% 20%);
-  --accent: hsl(252deg 42% 62%);
+  --text-color: hsl(250, 30%, 20%);
+  --accent: hsl(252, 45%, 65%);
   --accent-bg: hsl(253, 19%, 86%);
   --focus: hsl(216, 94%, 58%);
   --font: 1.2rem/1.53 'IBM Plex Serif', 'sans-serif', serif;
@@ -18,7 +18,7 @@
   --accent-bg: hsl(253, 10%, 28%);
   --background-color: hsl(0, 0%, 17%);
   --text-color: hsl(31, 22%, 74%);
-  --hover-color: hsl(250deg 30% 20%);
+  --hover-color: hsl(250, 30%, 20%);
 }
 
 html {
@@ -243,6 +243,7 @@ a:active {
   align-items: center;
   align-self: center;
   white-space: nowrap;
+  text-decoration: none;
 }
 
 .go__back svg {
@@ -373,6 +374,9 @@ a:active {
   .intro__container {
     padding: 1.5em 0.75em;
   }
+  .go__back {
+    text-decoration: underline;
+  }
   .go__back .icon-chevron-left {
     position: absolute;
   }
@@ -394,7 +398,7 @@ a:active {
     bottom: 7px;
   }
   .airtable__embed {
-    height: calc(100vh - 255px);
+    height: calc(100vh - 244px);
     width: 100%;
     margin: unset;
   }
