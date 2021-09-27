@@ -13,5 +13,4 @@
 
 <br/>
 
-> **Contributor Guidelines:** [CONTRIBUTING.md](./CONTRIBUTING.md)<br/>
 > **License:** [MIT](https://github.com/kevinabouhanna/abouhanna/blob/main/LICENSE.txt)
