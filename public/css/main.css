@@ -162,13 +162,12 @@ a:active {
   outline: unset;
 }
 
-.scroll__to__bottom svg {
-  width: 1em;
-  color: var(--text-color);
-}
-
 .bounce {
   animation: bounce 2s infinite;
+}
+
+.scroll__to__bottom .bounce {
+  text-decoration: none;
 }
 
 .bounce:hover {
@@ -374,9 +373,14 @@ a:active {
   .intro__container {
     padding: 1.5em 0.75em;
   }
+  .go__back .icon-chevron-left {
+    position: absolute;
+  }
   .go__back::after {
     content: "Go back";
     position: static;
+    padding-left: 25px;
+    padding-bottom: 8px;
   }
   .go__back svg {
     width: 0.75em;
@@ -395,7 +399,7 @@ a:active {
     margin: unset;
   }
   .page__title {
-    padding-right: 5rem;
+    padding-right: 6rem;
     font-size: 1.5em
   }
   .airtable__container {
