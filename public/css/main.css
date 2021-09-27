@@ -132,6 +132,21 @@ a:active {
   /* TODO: change color */
 }
 
+/* utility classes
+     ========================================================================== */
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-inline-flex {
+  display: inline-flex;
+}
+
 .breadcrumb__container {
   padding: 1em 0;
   margin-left: 10px;
