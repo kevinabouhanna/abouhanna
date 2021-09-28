@@ -7,7 +7,6 @@
 <br/>
 
 ![Lighthouse Accessibility](public/assets/accessibility.svg)
-![Lighthouse Best Practices](public/assets/best-practices.svg)
 ![Lighthouse Performance](public/assets/performance.svg)
 ![Lighthouse SEO](public/assets/seo.svg)
 
