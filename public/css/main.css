@@ -41,12 +41,12 @@ body {
 }
 
 ::selection {
-  background-color: hsl(252, 28%, 85%);
+  background-color: hsl(252, 30%, 75%);
   /* WebKit/Blink Browsers */
 }
 
 .dark ::selection {
-  background-color: hsl(250, 30%, 20%);
+  background-color: hsl(250, 10%, 15%);
 }
 
 :focus {

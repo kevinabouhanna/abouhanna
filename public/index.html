@@ -65,7 +65,13 @@
   <footer-component></footer-component>
 
   <!-- Scripts -->
-  <script src="js/main.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <script>
+    const pronounceMyName = () => {
+      let audio = document.getElementById("audio");
+      audio.play()
+    }
+  </script>
 
 </body>
 

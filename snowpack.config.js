@@ -5,6 +5,7 @@ module.exports = {
   plugins: [
     '@snowpack/plugin-babel',
     '@snowpack/plugin-postcss',
+    '@snowpack/plugin-webpack',
   ],
   optimize: {
     /* Use built-in esbuild bundling for build */
