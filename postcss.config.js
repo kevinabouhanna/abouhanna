@@ -7,7 +7,7 @@ module.exports = {
   plugins: [
     importUrl(),
     postcssImport({
-      path: 'src/css',
+      path: 'public/css',
     }),
     postcsseasings(),
     postcssPresetEnv({
