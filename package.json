@@ -15,7 +15,7 @@
   "browserslist": ">0.75%, not ie 11, not UCAndroid >0, not OperaMini all",
   "scripts": {
     "start": "snowpack dev",
-    "build": "snowpack build"
+    "build": "snowpack build NODE_ENV=production node postcss"
   },
   "devDependencies": {
     "snowpack": "^3.8.8",
