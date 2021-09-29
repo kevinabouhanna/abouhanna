@@ -352,10 +352,9 @@ a:active {
 }
 
 .harra {
-  width: 40px;
-  height: 40px;
   position: absolute;
   transform: translate(-2%, -74%);
+  width: 40px;
 }
 
 /**
@@ -441,9 +440,8 @@ a:active {
     width: 0.75em;
   }
   .harra {
-    height: 48px;
     transform: translate(-8%, -72%);
-    width: 48px;
+    width: inherit;
   }
   /**
    * white-label airtable desktop

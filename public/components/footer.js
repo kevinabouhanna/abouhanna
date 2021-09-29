@@ -29,7 +29,7 @@ class Footer extends HTMLElement {
             <a title="Visit gabykaram.com" aria-label="visit Gaby Karam Dot Com" class="text-decoration-none p-1" href="https://gabykaram.com">
               <i class="icon-chevron-left"></i>
             </a>
-            <a title="Batata Harra Webring" aria-label="visit Batata Harra Dot Guru" class="text-decoration-none m-1" href="https://batataharra.guru" target="_blank">
+            <a rel="noopener" title="Batata Harra Webring" aria-label="visit Batata Harra Dot Guru" class="text-decoration-none m-1" href="https://batataharra.guru" target="_blank">
               <span>
                 <img class="harra" src="../images/flame.gif" alt="Flame">
                 <span class="batata">🥔</span>
