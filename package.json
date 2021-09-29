@@ -31,6 +31,7 @@
     "postcss-import": "^14.0.2",
     "postcss-import-url": "^7.0.0",
     "postcss-preset-env": "6.7.0",
-    "snowpack": "^3.8.8"
+    "snowpack": "^3.8.8",
+    "jasmine": "^3.9.0"
   }
 }
