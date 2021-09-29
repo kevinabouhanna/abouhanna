@@ -1,16 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;700&display=swap");
 :root {
   --background-color: hsl(0, 0%, 93%);
   --text-color: hsl(250, 30%, 20%);
   --accent: hsl(252, 45%, 65%);
   --accent-bg: hsl(253, 19%, 86%);
   --focus: hsl(216, 94%, 58%);
-  --font: 1.2rem/1.53 'IBM Plex Serif', 'sans-serif', serif;
-  --transition: .5s all ease;
+  --font: 1.2rem/1.53 "IBM Plex Serif", "sans-serif", serif;
+  --transition: 0.5s all ease;
   box-sizing: border-box;
 }
 
-*, ::before, ::after {
+*,
+::before,
+::after {
   box-sizing: inherit;
 }
 
@@ -29,7 +31,7 @@ html {
 body {
   margin: 0;
   font: var(--font);
-  font-feature-settings: 'case', 'calt', 'tnum', 'ss01', 'zero';
+  font-feature-settings: "case", "calt", "tnum", "ss01", "zero";
   text-rendering: optimizeLegibility;
   background-color: var(--background-color);
   color: var(--text-color);
@@ -55,27 +57,29 @@ body {
 }
 
 img {
-  max-width: 100%
+  max-width: 100%;
 }
 
 /* and the class clearfix to an element to force it to contain its floated contents (this is used as a fallback for browser that don't support flex and grid */
 
 .float-left {
-  float: left
+  float: left;
 }
 
-.clearfix:before, .clearfix:after {
+.clearfix:before,
+.clearfix:after {
   content: " ";
   display: table;
 }
 
 .clearfix:after {
-  clear: both
+  clear: both;
 }
 
 /* show focus only when user is tabbing, you can find it's relevant JS code in main.js*/
 
-body:not(.user__is__tabbing) a:focus, body:not(.user__is__tabbing) button:focus {
+body:not(.user__is__tabbing) a:focus,
+body:not(.user__is__tabbing) button:focus {
   outline: none;
 }
 
@@ -102,7 +106,12 @@ body::-webkit-scrollbar-thumb:hover {
 /* general classes
      ========================================================================== */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   letter-spacing: -0.01em;
 }
 
@@ -138,6 +147,25 @@ a:active {
 /* utility classes
      ========================================================================== */
 
+/* text modifiers */
+.text-align-center {
+  text-align: center;
+}
+
+/* margin modifiers */
+.m-1 {
+  margin: 0.5em;
+}
+
+/* padding modifiers */
+.p-1 {
+  padding: 0.5em;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -169,10 +197,6 @@ a:active {
   animation: bounce 2s infinite;
 }
 
-.scroll__to__bottom .bounce {
-  text-decoration: none;
-}
-
 .bounce:hover {
   animation: unset;
 }
@@ -201,12 +225,12 @@ a:active {
   position: relative;
   height: calc(100vh - 76px);
   max-width: 800px;
-  padding: .75em;
+  padding: 0.75em;
   margin: 0 auto;
 }
 
 .airtable__container {
-  position: relative
+  position: relative;
 }
 
 .intro__title {
@@ -216,7 +240,7 @@ a:active {
   font-size: 2.25rem;
 }
 
-.intro__title>span {
+.intro__title > span {
   font-size: 0.6em;
   display: flex;
   align-self: center;
@@ -267,11 +291,11 @@ a:active {
   height: calc(100vh - 78px);
   width: calc(100vw - 20px);
   margin: 0 10px;
-  background: url('../images/loader.svg') center no-repeat;
+  background: url("../images/loader.svg") center no-repeat;
 }
 
 .dark .airtable__embed {
-  background: url('../images/loader-white.svg') center no-repeat
+  background: url("../images/loader-white.svg") center no-repeat;
 }
 
 /* contact classes
@@ -286,11 +310,11 @@ a:active {
 .contact__inner {
   display: grid;
   place-content: center;
-  padding: .75em;
+  padding: 0.75em;
 }
 
 .contact__social {
-  display: flex
+  display: flex;
 }
 
 .contact__social a {
@@ -303,14 +327,35 @@ a:active {
   padding-top: 0.2rem;
 }
 
-.contact__social svg:hover, .dark .contact__social svg {
+.contact__social svg:hover,
+.dark .contact__social svg {
   fill: var(--accent);
-  transition: fill .2s ease-out;
+  transition: fill 0.2s ease-out;
 }
 
 .dark .contact__social svg:hover {
   fill: var(--hover-color);
-  transition: fill .2s ease-out;
+  transition: fill 0.2s ease-out;
+}
+
+.webring {
+  padding-top: 1em;
+}
+
+.batata-harra {
+  margin-top: 1.8em;
+}
+
+.batata {
+  display: inline-block;
+  min-width: 40px;
+}
+
+.harra {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  transform: translate(-2%, -74%);
 }
 
 /**
@@ -351,7 +396,7 @@ a:active {
 
 @media screen and (min-width: 600px) {
   :root {
-    --font: 1.6rem/1.63 'IBM Plex Serif', 'sans-serif', serif;
+    --font: 1.6rem/1.63 "IBM Plex Serif", "sans-serif", serif;
   }
   h1 {
     font-size: 2.45rem;
@@ -395,6 +440,11 @@ a:active {
   .go__back svg {
     width: 0.75em;
   }
+  .harra {
+    height: 48px;
+    transform: translate(-8%, -72%);
+    width: 48px;
+  }
   /**
    * white-label airtable desktop
    */
@@ -422,7 +472,7 @@ a:active {
     margin: 0 auto;
   }
   .contact__inner {
-    padding: 4em .75em;
+    padding: 4em 0.75em;
   }
 }
 
@@ -441,7 +491,11 @@ a:active {
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
   40% {

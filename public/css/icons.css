@@ -24,6 +24,19 @@ i {
   content: "\e900";
 }
 
-.icon-chevron-left:before {
+.icon-chevron-right:before {
   content: "\e901";
+}
+
+.icon-chevron-left:before {
+  content: "\e904";
+}
+
+.icon-loader:before {
+  content: "\e902";
+}
+
+.icon-loader-white:before {
+  content: "\e903";
+  color: #ccbeaf;
 }
