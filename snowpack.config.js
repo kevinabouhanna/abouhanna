@@ -1,6 +1,6 @@
 module.exports = {
   mount: {
-    public: { url: '/', static: true },
+    public: { url: '/' },
   },
   plugins: [
     '@snowpack/plugin-babel',
