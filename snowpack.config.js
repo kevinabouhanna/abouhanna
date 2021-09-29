@@ -6,6 +6,14 @@ module.exports = {
     '@snowpack/plugin-babel',
     '@snowpack/plugin-postcss',
     '@snowpack/plugin-webpack',
+    [
+      '@snowpack/plugin-build-script',
+      {
+        cmd: 'postcss',
+        input: ['.css'],
+        output: ['.css'],
+      },
+    ],
   ],
   optimize: {
     /* Use built-in esbuild bundling for build */

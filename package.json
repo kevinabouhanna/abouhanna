@@ -1,6 +1,6 @@
 {
   "name": "kevin_abou_hanna",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Kevin Abou Hanna - Product Designer and Frontend Developer",
   "repository": "github:kevinabouhanna/abouhanna",
   "homepage": "https://abouhanna.com",
@@ -18,16 +18,18 @@
     "build": "snowpack build"
   },
   "devDependencies": {
-    "snowpack": "^3.8.8",
+    "@babel/preset-env": "^7.15.6",
+    "@snowpack/plugin-babel": "^2.1.7",
+    "@snowpack/plugin-build-script": "^2.1.0",
     "@snowpack/plugin-postcss": "^1.4.3",
     "@snowpack/plugin-webpack": "^3.0.0",
-    "@snowpack/plugin-babel": "^2.1.7",
-    "@babel/preset-env": "^7.15.6",
+    "autoprefixer": "^10.3.6",
     "postcss": "^8.3.8",
     "postcss-cli": "9.0.0",
     "postcss-easings": "^3.0.1",
     "postcss-import": "^14.0.2",
     "postcss-import-url": "^7.0.0",
-    "postcss-preset-env": "6.7.0"
+    "postcss-preset-env": "6.7.0",
+    "snowpack": "^3.8.8"
   }
 }
