@@ -29,6 +29,7 @@
 
   <!-- components -->
   <script src="components/footer.js" type="text/javascript" defer></script>
+  <!-- <script src="components/currently-playing.js" type="text/javascript" defer></script> -->
 </head>
 
 <body>
@@ -37,7 +38,7 @@
       <img class="profile__picture" src="/images/Profit_Picture.png" alt="Kevin Abou Hanna profile picture">
       <div>
         <h1 id="greetingHuman" class="intro__title"></h1>
-        <span> My name is
+        <span>My name is
           <strong>Kevin Abou Hanna</strong>
           <button class="speaker__high__volume cursor-pointer" type="button" onclick="pronounceMyName()">🔊</button>
           <!-- Your audio source -->
@@ -63,17 +64,16 @@
   </div>
 
   <footer-component></footer-component>
-
+  <!-- <currently-playing></currently-playing> -->
   <!-- Scripts -->
   <script type="module" src="js/main.js"></script>
   <script>
-    var context = new AudioContext(); // Make it crossbrowser
+    let context = new AudioContext(); // Make it crossbrowser
 
     function unlock() {
-      console.log("unlocking");
       // create empty buffer and play it
-      var buffer = context.createBuffer(1, 1, 22050);
-      var source = context.createBufferSource();
+      let buffer = context.createBuffer(1, 1, 22050);
+      let source = context.createBufferSource();
       source.buffer = buffer;
       source.connect(context.destination);
 
@@ -93,15 +93,15 @@
     // Try to unlock
     unlock();
 
-    var play = function play(audioBuffer) {
-      var source = context.createBufferSource();
+    let play = function play(audioBuffer) {
+      let source = context.createBufferSource();
       source.buffer = audioBuffer;
       source.connect(context.destination);
       source.start();
     };
-    var yodelBuffer = void 0;
+    let yodelBuffer = void 0;
 
-    var URL = "./assets/my_name.mp3";
+    let URL = "./assets/my_name.mp3";
     // The Promise-based syntax for BaseAudioContext.decodeAudioData() is not supported in Safari(Webkit).
     window
       .fetch(URL)
