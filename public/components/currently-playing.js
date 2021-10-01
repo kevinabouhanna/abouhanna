@@ -12,16 +12,23 @@ class CurrentlyPlaying extends HTMLElement {
     this.template.innerHTML = `
     <style>
       .spotify__container {
-        display: flex
+        display: flex;
+        align-items: center;
+        padding: .4em .4em 0 .4em
       }
       .album__cover {
         align-self: center
       }
       .text__container {
-        padding-left: .4em
+        padding-left: .4em;
+        white-space: nowrap
       }
-      .album__cover {
-        width: 3em
+      .artist__name {
+        font-size: 1rem
+      }
+      .song__name {
+        font-size: 1.4rem;
+        padding-bottom: .4em
       }
     </style>
 
@@ -29,10 +36,12 @@ class CurrentlyPlaying extends HTMLElement {
 
     </div>`;
     let counter = 0;
+    this.renderSpotify(counter);
+    counter++;
     setInterval(() => {
       this.renderSpotify(counter);
       counter++;
-    }, 4 * 1 * 1000)
+    }, 20 * 1 * 1000)
 
   }
 
@@ -48,7 +57,7 @@ class CurrentlyPlaying extends HTMLElement {
       .then(({ isPlaying, data }) => { // isPlaying, author, message
 
         if (isPlaying) {
-          const albumCover = this.getImageBySize(data.album.images, 'medium');
+          const albumCover = this.getImageBySize(data.album.images, 'small');
           const albumName = data.album.name;
           const artistName = this.getArtistName(data.artists);
           const spotifyContainer = `

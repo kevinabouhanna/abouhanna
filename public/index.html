@@ -29,13 +29,26 @@
 
   <!-- components -->
   <script src="components/footer.js" type="text/javascript" defer></script>
-  <!-- <script src="components/currently-playing.js" type="text/javascript" defer></script> -->
+  <script src="components/currently-playing.js" type="text/javascript" defer></script>
 </head>
 
 <body>
   <div class="intro__container">
     <div class="profile__container">
-      <img class="profile__picture" src="/images/Profit_Picture.png" alt="Kevin Abou Hanna profile picture">
+      <div>
+        <img class="profile__picture" src="/images/Profit_Picture.png" alt="Kevin Abou Hanna profile picture">
+        <div class="user__status__container position-relative">
+          <div class="user__status__circle__badge__container">
+            <div class="user__status__circle__badge">
+              <i class="music__icon"></i>
+              <!-- <span class="user__status__message">Kevin is currently playing</span> -->
+              <div class="user__status__inner__wrapper">
+                <currently-playing></currently-playing>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div>
         <h1 id="greetingHuman" class="intro__title"></h1>
         <span>My name is
@@ -64,7 +77,6 @@
   </div>
 
   <footer-component></footer-component>
-  <!-- <currently-playing></currently-playing> -->
   <!-- Scripts -->
   <script type="module" src="js/main.js"></script>
   <script>

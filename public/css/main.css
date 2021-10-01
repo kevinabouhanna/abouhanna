@@ -7,6 +7,7 @@
   --focus: hsl(216, 94%, 58%);
   --font: 1.2rem/1.53 "IBM Plex Serif", "sans-serif", serif;
   --transition: 0.5s all ease;
+  --box-shadow: 0px 0px 0.3rem rgb(148 136 195 / 70%);
   box-sizing: border-box;
 }
 
@@ -147,9 +148,27 @@ a:active {
 /* utility classes
      ========================================================================== */
 
+/* display modifiers */
+.d-flex {
+  display: flex !important;
+}
+
+.d-inline-flex {
+  display: inline-flex !important;
+}
+
+.d-inline-block {
+  display: inline-block !important;
+}
+
 /* text modifiers */
 .text-align-center {
-  text-align: center;
+  text-align: center !important;
+}
+
+/* position modifiers */
+.position-relative {
+  position: relative !important;
 }
 
 /* margin modifiers */
@@ -168,14 +187,6 @@ a:active {
 
 .cursor-pointer {
   cursor: pointer;
-}
-
-.d-flex {
-  display: flex;
-}
-
-.d-inline-flex {
-  display: inline-flex;
 }
 
 .breadcrumb__container {
@@ -214,7 +225,7 @@ a:active {
 .profile__picture {
   width: 150px;
   height: 150px;
-  box-shadow: 0px 0px 0.3rem rgb(148 136 195 / 70%);
+  box-shadow: var(--box-shadow);
   border-radius: 50%;
   margin-bottom: 1em;
 }
@@ -390,6 +401,10 @@ a:active {
   pointer-events: none;
 }
 
+.user__status__container {
+  display: none;
+}
+
 /* desktop styles
      ========================================================================== */
 
@@ -471,6 +486,74 @@ a:active {
   }
   .contact__inner {
     padding: 4em 0.75em;
+  }
+  /* desktop only feature, show currently playing song */
+  .user__status__container {
+    display: block;
+  }
+  .user__status__circle__badge__container {
+    bottom: 0;
+    height: 38px;
+    width: 38px;
+    left: 100%;
+    margin-bottom: 32px;
+    margin-left: -90px;
+    position: absolute;
+    z-index: 2;
+    box-shadow: var(--box-shadow);
+    border-radius: 50px;
+    background-color: var(--background-color);
+  }
+  .user__status__circle__badge__container:not(:hover) {
+    display: inline-flex;
+    justify-content: center;
+  }
+  .user__status__circle__badge__container:hover {
+    border-radius: 18px;
+    height: 115px;
+    max-width: 544px;
+    top: -70px;
+    width: auto;
+  }
+  .user__status__circle__badge__container:not(:hover)
+    .user__status__circle__badge {
+    display: inline-flex;
+    align-items: center;
+  }
+  .music__icon {
+    background-image: url(../images/music-note-outline-white-bg.gif);
+    background-size: cover;
+    object-fit: cover;
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .user__status__circle__badge__container:is(:hover) .music__icon:before {
+    content: "Listening to";
+    width: 100%;
+    position: relative;
+    white-space: nowrap;
+    font-family: "IBM Plex Serif";
+    font-size: 1rem;
+    left: 2.4em;
+    top: 0px;
+  }
+  .dark .music__icon {
+    background-image: url(../images/music-note-outline-dark-bg.gif);
+  }
+  .user__status__circle__badge__container .user__status__inner__wrapper {
+    width: 0;
+    padding-top: 1.2em !important;
+    overflow: hidden;
+    line-height: 0px;
+    opacity: 0;
+  }
+  .user__status__circle__badge__container:hover .user__status__inner__wrapper {
+    width: 100%;
+    opacity: 1;
+    line-height: 20px;
   }
 }
 
