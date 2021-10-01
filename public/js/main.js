@@ -9,18 +9,15 @@ window.addEventListener('keydown', handleFirstTab);
 
 const myDate = new Date();
 let hrs = myDate.getHours();
-const sunFlowerEmoji = '<span>🌻</span>'
-const sunEmoji = '<span>☀️</span>';
-const moonEmoji = '<span>🌑</span>'
 
 let greet;
 
 if (hrs >= 4 && hrs < 12)
-  greet = 'Good Morning' + sunFlowerEmoji;
+  greet = 'Good Morning';
 else if (hrs >= 12 && hrs <= 17)
-  greet = 'Good Afternoon' + sunEmoji;
+  greet = 'Good Afternoon';
 else
-  greet = 'Good Evening' + moonEmoji;
+  greet = 'Good Evening';
 
 // greeting message
 if (document.getElementById('greetingHuman') != null) {

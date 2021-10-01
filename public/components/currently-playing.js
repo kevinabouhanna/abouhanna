@@ -11,6 +11,16 @@ class CurrentlyPlaying extends HTMLElement {
 
     this.template.innerHTML = `
     <style>
+      :root {
+        --background-color: hsl(0, 0%, 93%);
+        --box-shadow: 0px 0px 0.3rem rgb(148 136 195 / 70%);
+      }
+      .dark {
+        --background-color: hsl(0, 0%, 17%);
+      }
+      .position-relative {
+        position: relative !important;
+      }
       .spotify__container {
         display: flex;
         align-items: center;
@@ -30,18 +40,93 @@ class CurrentlyPlaying extends HTMLElement {
         font-size: 1.4rem;
         padding-bottom: .4em
       }
+      .user__status__container {
+        display: none;
+      }
+      /* desktop styles
+     ========================================================================== */
+      @media screen and (min-width: 600px) {
+        /* desktop only feature, show currently playing song */
+        .user__status__container {
+          display: block;
+        }
+        .user__status__circle__badge__container {
+          bottom: 0;
+          height: 38px;
+          width: 38px;
+          left: 100%;
+          margin-bottom: 32px;
+          margin-left: -90px;
+          position: absolute;
+          z-index: 2;
+          box-shadow: var(--box-shadow);
+          border-radius: 50px;
+          background-color: var(--background-color);
+        }
+        .user__status__circle__badge__container:not(:hover) {
+          display: inline-flex;
+          justify-content: center;
+        }
+        .user__status__circle__badge__container:hover {
+          border-radius: 18px;
+          height: 115px;
+          max-width: 544px;
+          top: -70px;
+          width: auto;
+        }
+        .user__status__circle__badge__container:not(:hover)
+          .user__status__circle__badge {
+          display: inline-flex;
+          align-items: center;
+        }
+        .music__icon {
+          background-image: url(../images/music-note-outline-white-bg.gif);
+          background-size: cover;
+          object-fit: cover;
+          width: 38px;
+          height: 38px;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        .user__status__circle__badge__container:is(:hover) .music__icon:before {
+          content: "Listening to";
+          width: 100%;
+          position: relative;
+          white-space: nowrap;
+          font-family: "IBM Plex Serif";
+          font-size: 1rem;
+          left: 2.4em;
+          top: -8px;
+          font-style: initial;
+        }
+        .dark .music__icon {
+          background-image: url(../images/music-note-outline-dark-bg.gif);
+        }
+        .user__status__circle__badge__container .user__status__inner__wrapper {
+          width: 0;
+          padding-top: 1.2em !important;
+          overflow: hidden;
+          line-height: 0px;
+          opacity: 0;
+        }
+        .user__status__circle__badge__container:hover .user__status__inner__wrapper {
+          width: 100%;
+          opacity: 1;
+          line-height: 20px;
+        }
+      }
     </style>
+    <div id="user-status" class="user__status__container position-relative">
 
-    <div id="spotify">
-
-    </div>`;
+        </div>`;
     let counter = 0;
     this.renderSpotify(counter);
     counter++;
     setInterval(() => {
       this.renderSpotify(counter);
       counter++;
-    }, 20 * 1 * 1000)
+    }, 20 * 60 * 1000)
 
   }
 
@@ -50,6 +135,10 @@ class CurrentlyPlaying extends HTMLElement {
       this.attachShadow({ mode: "open" });
       this.shadowRoot.appendChild(this.template.content.cloneNode(true));
     }
+
+    const myDate = new Date();
+    let hrs = myDate.getHours();
+    let isLight = hrs >= 4 && hrs <= 17;
 
     // e.g. https://batataharra.guru
     fetch(DATA_FOR_SPOTIFY)
@@ -61,33 +150,38 @@ class CurrentlyPlaying extends HTMLElement {
           const albumName = data.album.name;
           const artistName = this.getArtistName(data.artists);
           const spotifyContainer = `
-        <div class="spotify__container">
-          <img class="album__cover" title="${albumName}" src="${albumCover}" />
-          <div class="text__container">
-            <div class="song__name">${data.name}</div>
-            <div class="artist__name">${artistName}</div>
+          <div class="user__status__circle__badge__container ${isLight ? ' light ':  ' dark '}">
+            <div class="user__status__circle__badge">
+              <i class="music__icon"></i>
+              <div class="user__status__inner__wrapper">
+                <div id="spotify">
+                  <div class="spotify__container">
+                  <img class="album__cover" title="${albumName}" src="${albumCover}" />
+                  <div class="text__container">
+                    <div class="song__name">${data.name}</div>
+                    <div class="artist__name">${artistName}</div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
         `;
           if (counter === 0) {
-            this.shadowRoot.querySelector("#spotify").insertAdjacentHTML("afterbegin", spotifyContainer);
+            this.shadowRoot.querySelector("#user-status").insertAdjacentHTML("afterbegin", spotifyContainer);
           } else {
-            this.shadowRoot.querySelector("#spotify").innerHTML = spotifyContainer;
+            this.shadowRoot.querySelector("#user-status").innerHTML = spotifyContainer;
           }
         } else {
           // const track = data.items[0].track;
           // const albumCover = this.getImageBySize(track.album.images, 'small');
           // const albumName = track.album.name;
           // const artistName = this.getArtistName(track.artists);
-          const spotifyContainer = `
-        <p>
-        Not playing
-        </p>
-        `;
+          const spotifyContainer = ``;
           if (counter === 0) {
-            this.shadowRoot.querySelector("#spotify").insertAdjacentHTML("afterbegin", spotifyContainer);
+            this.shadowRoot.querySelector("#user-status").insertAdjacentHTML("afterbegin", spotifyContainer);
           } else {
-            this.shadowRoot.querySelector("#spotify").innerHTML = spotifyContainer;
+            this.shadowRoot.querySelector("#user-status").innerHTML = spotifyContainer;
           }
         }
 

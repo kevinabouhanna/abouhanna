@@ -240,6 +240,19 @@ a:active {
   margin: 0 auto;
 }
 
+.speaker__hight__volume__icon {
+  background-image: url("../images/volume-dark-bg.svg");
+  height: 20px;
+  width: 25px;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+}
+
+.dark .speaker__hight__volume__icon {
+  background-image: url("../images/volume-light-bg.svg");
+}
+
 .airtable__container {
   position: relative;
 }
@@ -260,11 +273,9 @@ a:active {
 }
 
 .speaker__high__volume {
-  background: unset;
-  border: unset;
-  font-size: 0.8em;
+  background: none;
+  border: none;
   padding: 0;
-  margin-right: 2px;
 }
 
 .company__external__link svg {
@@ -401,10 +412,6 @@ a:active {
   pointer-events: none;
 }
 
-.user__status__container {
-  display: none;
-}
-
 /* desktop styles
      ========================================================================== */
 
@@ -416,7 +423,8 @@ a:active {
     font-size: 2.45rem;
   }
   .intro__title {
-    font-size: 3.45rem;
+    font-size: 3.8rem;
+    line-height: 1.658;
   }
   .intro__description {
     margin: 2em 0;
@@ -486,74 +494,6 @@ a:active {
   }
   .contact__inner {
     padding: 4em 0.75em;
-  }
-  /* desktop only feature, show currently playing song */
-  .user__status__container {
-    display: block;
-  }
-  .user__status__circle__badge__container {
-    bottom: 0;
-    height: 38px;
-    width: 38px;
-    left: 100%;
-    margin-bottom: 32px;
-    margin-left: -90px;
-    position: absolute;
-    z-index: 2;
-    box-shadow: var(--box-shadow);
-    border-radius: 50px;
-    background-color: var(--background-color);
-  }
-  .user__status__circle__badge__container:not(:hover) {
-    display: inline-flex;
-    justify-content: center;
-  }
-  .user__status__circle__badge__container:hover {
-    border-radius: 18px;
-    height: 115px;
-    max-width: 544px;
-    top: -70px;
-    width: auto;
-  }
-  .user__status__circle__badge__container:not(:hover)
-    .user__status__circle__badge {
-    display: inline-flex;
-    align-items: center;
-  }
-  .music__icon {
-    background-image: url(../images/music-note-outline-white-bg.gif);
-    background-size: cover;
-    object-fit: cover;
-    width: 38px;
-    height: 38px;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  .user__status__circle__badge__container:is(:hover) .music__icon:before {
-    content: "Listening to";
-    width: 100%;
-    position: relative;
-    white-space: nowrap;
-    font-family: "IBM Plex Serif";
-    font-size: 1rem;
-    left: 2.4em;
-    top: 0px;
-  }
-  .dark .music__icon {
-    background-image: url(../images/music-note-outline-dark-bg.gif);
-  }
-  .user__status__circle__badge__container .user__status__inner__wrapper {
-    width: 0;
-    padding-top: 1.2em !important;
-    overflow: hidden;
-    line-height: 0px;
-    opacity: 0;
-  }
-  .user__status__circle__badge__container:hover .user__status__inner__wrapper {
-    width: 100%;
-    opacity: 1;
-    line-height: 20px;
   }
 }
 
