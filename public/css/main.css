@@ -21,7 +21,7 @@
   --accent-bg: hsl(253, 10%, 28%);
   --background-color: hsl(0, 0%, 17%);
   --text-color: hsl(31, 22%, 74%);
-  --hover-color: hsl(250, 30%, 20%);
+  --hover-color: hsl(250, 10%, 10%);
 }
 
 html {
@@ -222,14 +222,6 @@ a:active {
   padding-bottom: 1em;
 }
 
-.profile__picture {
-  width: 150px;
-  height: 150px;
-  box-shadow: var(--box-shadow);
-  border-radius: 50%;
-  margin-bottom: 1em;
-}
-
 .intro__container {
   display: grid;
   place-content: center;
@@ -241,16 +233,16 @@ a:active {
 }
 
 .speaker__hight__volume__icon {
-  background-image: url("../images/volume-dark-bg.svg");
-  height: 20px;
-  width: 25px;
+  background-image: url("../images/volume-dark-bg--small.svg");
+  height: 16px;
+  width: 20px;
   display: inline-block;
   position: relative;
   top: 2px;
 }
 
 .dark .speaker__hight__volume__icon {
-  background-image: url("../images/volume-light-bg.svg");
+  background-image: url("../images/volume-light-bg--small.svg");
 }
 
 .airtable__container {
@@ -415,37 +407,42 @@ a:active {
 /* desktop styles
      ========================================================================== */
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 450px) {
   :root {
     --font: 1.6rem/1.63 "IBM Plex Serif", "sans-serif", serif;
   }
   h1 {
     font-size: 2.45rem;
   }
+  .intro__container {
+    padding: 1.5em 0.75em;
+  }
   .intro__title {
     font-size: 3.8rem;
     line-height: 1.658;
+    justify-content: flex-start;
   }
   .intro__description {
     margin: 2em 0;
   }
-  .breadcrumb__container {
-    padding: 2em 0;
-    margin-left: unset;
+  .speaker__hight__volume__icon {
+    height: 20px;
+    width: 25px;
+  }
+  .speaker__hight__volume__icon {
+    background-image: url("../images/volume-dark-bg.svg");
+  }
+  .dark .speaker__hight__volume__icon {
+    background-image: url("../images/volume-light-bg.svg");
   }
   .profile__container {
     flex-direction: row;
     justify-content: center;
     padding-bottom: unset;
   }
-  .profile__picture {
-    width: 200px;
-    height: 200px;
-    margin-right: 2em;
-    margin-bottom: unset;
-  }
-  .intro__container {
-    padding: 1.5em 0.75em;
+  .breadcrumb__container {
+    padding: 2em 0;
+    margin-left: unset;
   }
   .go__back {
     text-decoration: underline;
@@ -462,9 +459,8 @@ a:active {
   .go__back svg {
     width: 0.75em;
   }
-  .harra {
-    transform: translate(-8%, -72%);
-    width: fit-content;
+  .page__title {
+    padding-right: 4em;
   }
   /**
    * white-label airtable desktop
@@ -479,9 +475,6 @@ a:active {
     width: 100%;
     margin: unset;
   }
-  .page__title {
-    padding-right: 4em;
-  }
   .airtable__container {
     margin-right: auto;
     margin-left: auto;
@@ -494,6 +487,10 @@ a:active {
   }
   .contact__inner {
     padding: 4em 0.75em;
+  }
+  .harra {
+    transform: translate(-8%, -72%);
+    width: fit-content;
   }
 }
 

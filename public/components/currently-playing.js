@@ -26,6 +26,30 @@ class CurrentlyPlaying extends HTMLElement {
         align-items: center;
         padding: .4em .4em 0 .4em
       }
+      .profile__picture {
+        width: 150px;
+        height: 150px;
+        box-shadow: var(--box-shadow);
+        border-radius: 50%;
+        margin-bottom: 1em;
+        position: relative;
+        top: -176px;
+        left: 27px;
+      }
+      .story {
+        height: 204px;
+        width: 204px;
+      }
+      .story svg {
+        display: block;
+        fill: none;
+        stroke: #8a3ab8;
+        stroke-width: 2px;
+        stroke-dasharray: 1;
+        stroke-dashoffset: 0;
+        stroke-linecap: round;
+        animation: loading 3000ms ease-in-out infinite alternate;
+      }
       .album__cover {
         align-self: center
       }
@@ -45,8 +69,24 @@ class CurrentlyPlaying extends HTMLElement {
       }
       /* desktop styles
      ========================================================================== */
-      @media screen and (min-width: 600px) {
+      @media screen and (min-width: 450px) {
         /* desktop only feature, show currently playing song */
+        .story {
+          height: initial;
+          width: initial;
+        }
+        .story > svg {
+          display: none;
+        }
+        .profile__picture {
+          width: 200px;
+          height: 200px;
+          margin-right: 2em;
+          margin-bottom: unset;
+          position: initial;
+          top: initial;
+          left: initial;
+        }
         .user__status__container {
           display: block;
         }
@@ -116,7 +156,20 @@ class CurrentlyPlaying extends HTMLElement {
           line-height: 20px;
         }
       }
+      @keyframes loading {
+        100% {
+          stroke: rgb(148 136 195 / 70%);
+          stroke-dasharray: 3;
+          transform: rotate(200deg);
+        }
+      }
     </style>
+    <div class="story">
+      <svg viewbox="0 0 100 100">
+        <circle cx="50" cy="50" r="40" />
+      </svg>
+      <img class="profile__picture" src="/images/Profit_Picture.png" alt="Kevin Abou Hanna profile picture">
+    </div>
     <div id="user-status" class="user__status__container position-relative">
 
         </div>`;
@@ -150,7 +203,7 @@ class CurrentlyPlaying extends HTMLElement {
           const albumName = data.album.name;
           const artistName = this.getArtistName(data.artists);
           const spotifyContainer = `
-          <div class="user__status__circle__badge__container ${isLight ? ' light ':  ' dark '}">
+          <div class="user__status__circle__badge__container ${isLight ? ' light ' : ' dark '}">
             <div class="user__status__circle__badge">
               <i class="music__icon"></i>
               <div class="user__status__inner__wrapper">
