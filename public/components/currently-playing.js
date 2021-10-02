@@ -26,6 +26,9 @@ class CurrentlyPlaying extends HTMLElement {
         align-items: center;
         padding: .4em .4em 0 .4em
       }
+      .no__status .profile__picture {
+        position: inherit
+      }
       .profile__picture {
         width: 150px;
         height: 150px;
@@ -164,15 +167,9 @@ class CurrentlyPlaying extends HTMLElement {
         }
       }
     </style>
-    <div class="story">
-      <svg viewbox="0 0 100 100">
-        <circle cx="50" cy="50" r="40" />
-      </svg>
-      <img class="profile__picture" src="/images/Profit_Picture.png" alt="Kevin Abou Hanna profile picture">
-    </div>
-    <div id="user-status" class="user__status__container position-relative">
+    <div id="user-status">
 
-        </div>`;
+    </div>`;
     let counter = 0;
     this.renderSpotify(counter);
     counter++;
@@ -203,18 +200,25 @@ class CurrentlyPlaying extends HTMLElement {
           const albumName = data.album.name;
           const artistName = this.getArtistName(data.artists);
           const spotifyContainer = `
-          <div class="user__status__circle__badge__container ${isLight ? ' light ' : ' dark '}">
-            <div class="user__status__circle__badge">
-              <i class="music__icon"></i>
-              <div class="user__status__inner__wrapper">
-                <div id="spotify">
-                  <div class="spotify__container">
-                  <img class="album__cover" title="${albumName}" src="${albumCover}" />
-                  <div class="text__container">
-                    <div class="song__name">${data.name}</div>
-                    <div class="artist__name">${artistName}</div>
+          <div class="story">
+            <svg viewbox="0 0 100 100">
+              <circle cx="50" cy="50" r="40" />
+            </svg>
+            <img class="profile__picture" src="/images/Profit_Picture.png" alt="Kevin Abou Hanna profile picture" />
+          </div>
+          <div class="user__status__container position-relative">
+            <div class="user__status__circle__badge__container ${isLight ? ' light ' : ' dark '}">
+              <div class="user__status__circle__badge">
+                <i class="music__icon"></i>
+                <div class="user__status__inner__wrapper">
+                  <div id="spotify">
+                    <div class="spotify__container">
+                    <img class="album__cover" title="${albumName}" src="${albumCover}" />
+                    <div class="text__container">
+                      <div class="song__name">${data.name}</div>
+                      <div class="artist__name">${artistName}</div>
+                    </div>
                   </div>
-                </div>
                 </div>
               </div>
             </div>
@@ -230,7 +234,10 @@ class CurrentlyPlaying extends HTMLElement {
           // const albumCover = this.getImageBySize(track.album.images, 'small');
           // const albumName = track.album.name;
           // const artistName = this.getArtistName(track.artists);
-          const spotifyContainer = ``;
+          const spotifyContainer = `
+          <div class="no__status">
+            <img class="profile__picture" src="/images/Profit_Picture.png" alt="Kevin Abou Hanna profile picture" />
+          </div>`;
           if (counter === 0) {
             this.shadowRoot.querySelector("#user-status").insertAdjacentHTML("afterbegin", spotifyContainer);
           } else {
