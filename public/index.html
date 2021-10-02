@@ -30,9 +30,16 @@
   <!-- components -->
   <script src="components/footer.js" type="text/javascript" defer></script>
   <script src="components/currently-playing.js" type="text/javascript" defer></script>
+  <script src="components/currently-playing-mobile.js" type="text/javascript" defer></script>
 </head>
 
 <body>
+  <div id="open-modal" class="modal-window">
+      <a href="#" title="Close" class="modal-close"><i class="icon-times"></i></a>
+      <div>
+        <currently-playing-mobile></currently-playing-mobile>
+      </div>
+  </div>
   <div class="intro__container">
     <div class="profile__container">
       <div>

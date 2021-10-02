@@ -1,6 +1,5 @@
 
 const DATA_FOR_SPOTIFY = `https://wpshortcuts.studio/wp-json/spotify/v1/playing/2`;
-
 class CurrentlyPlaying extends HTMLElement {
   constructor() {
     super();
@@ -46,7 +45,7 @@ class CurrentlyPlaying extends HTMLElement {
       .story svg {
         display: block;
         fill: none;
-        stroke: #8a3ab8;
+        stroke: hsl(262deg 48% 38%);
         stroke-width: 2px;
         stroke-dasharray: 1;
         stroke-dashoffset: 0;
@@ -74,6 +73,9 @@ class CurrentlyPlaying extends HTMLElement {
      ========================================================================== */
       @media screen and (min-width: 450px) {
         /* desktop only feature, show currently playing song */
+        .profile__picture--cta {
+          pointer-events: none;
+        }
         .story {
           height: initial;
           width: initial;
@@ -122,7 +124,7 @@ class CurrentlyPlaying extends HTMLElement {
           display: inline-flex;
           align-items: center;
         }
-        .music__icon {
+        .icon-music {
           background-image: url(../images/music-note-outline-white-bg.gif);
           background-size: cover;
           object-fit: cover;
@@ -132,7 +134,7 @@ class CurrentlyPlaying extends HTMLElement {
           top: 0;
           left: 0;
         }
-        .user__status__circle__badge__container:is(:hover) .music__icon:before {
+        .user__status__circle__badge__container:is(:hover) .icon-music:before {
           content: "Listening to";
           width: 100%;
           position: relative;
@@ -143,7 +145,7 @@ class CurrentlyPlaying extends HTMLElement {
           top: -8px;
           font-style: initial;
         }
-        .dark .music__icon {
+        .dark .icon-music {
           background-image: url(../images/music-note-outline-dark-bg.gif);
         }
         .user__status__circle__badge__container .user__status__inner__wrapper {
@@ -200,16 +202,19 @@ class CurrentlyPlaying extends HTMLElement {
           const albumName = data.album.name;
           const artistName = this.getArtistName(data.artists);
           const spotifyContainer = `
+
           <div class="story">
             <svg viewbox="0 0 100 100">
               <circle cx="50" cy="50" r="40" />
             </svg>
-            <img class="profile__picture" src="/images/Profit_Picture.png" alt="Kevin Abou Hanna profile picture" />
+            <a class="profile__picture--cta" href="#open-modal">
+              <img class="profile__picture" src="/images/Profit_Picture.png" alt="Kevin Abou Hanna profile picture" />
+            </a>
           </div>
           <div class="user__status__container position-relative">
             <div class="user__status__circle__badge__container ${isLight ? ' light ' : ' dark '}">
               <div class="user__status__circle__badge">
-                <i class="music__icon"></i>
+                <i class="icon-music"></i>
                 <div class="user__status__inner__wrapper">
                   <div id="spotify">
                     <div class="spotify__container">
@@ -230,10 +235,6 @@ class CurrentlyPlaying extends HTMLElement {
             this.shadowRoot.querySelector("#user-status").innerHTML = spotifyContainer;
           }
         } else {
-          // const track = data.items[0].track;
-          // const albumCover = this.getImageBySize(track.album.images, 'small');
-          // const albumName = track.album.name;
-          // const artistName = this.getArtistName(track.artists);
           const spotifyContainer = `
           <div class="no__status">
             <img class="profile__picture" src="/images/Profit_Picture.png" alt="Kevin Abou Hanna profile picture" />

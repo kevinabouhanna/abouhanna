@@ -214,6 +214,43 @@ a:active {
 
 /* homepage classes
      ========================================================================== */
+.modal-window {
+  padding: 0.75em;
+  position: fixed;
+  background-color: var(--background-color);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.modal-window:target {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.icon-times {
+  background-image: url("../images/times-light-bg--small.svg");
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+.modal-close {
+  float: right;
+  margin: 0.8em;
+}
+
+.dark .icon-times {
+  background-image: url("../images/times-dark-bg--small.svg");
+}
 
 .profile__container {
   display: flex;
@@ -427,7 +464,7 @@ a:active {
     justify-content: flex-start;
   }
   .intro__title__name {
-    padding-left: 6px;
+    padding-left: 4px;
   }
   .intro__description {
     margin: 2em 0;
