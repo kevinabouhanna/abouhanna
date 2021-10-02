@@ -17,19 +17,110 @@ class CurrentlyPlayingMobile extends HTMLElement {
       .dark {
         --background-color: hsl(0, 0%, 17%);
       }
+      *:before,
+      *:after {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      .spotify__container {
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+      }
+      .song__name, .artist__name {
+        font-weight: 700
+      }
+      .spotify__container__text {
+        margin: 0;
+      }
+      .spotify__container__text--primary {
+        padding: 5em 1.25em 0.25em;
+      }
+      .spotify__container__text--secondary {
+        padding: 1.25em;
+      }
       .album__cover {
         align-self: center
       }
-      .text__container {
-        padding-left: .4em;
-        white-space: nowrap
+      .video__icon__wrapper {
+        display: flex;
+        align-items: self-end;
       }
-      .artist__name {
-        font-size: 1rem
+      .video__icon {
+        position: relative;
+        width: 50px;
+        left: 6px;
+        top: 10px;
       }
-      .song__name {
-        font-size: 1.4rem;
-        padding-bottom: .4em
+      .video__icon .circle--outer {
+        border: 1px solid #e50040;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin: 0 auto 5px;
+        position: relative;
+        opacity: 0.8;
+        -webkit-animation: circle 2s ease-in-out infinite;
+        animation: circle 2s ease-in-out infinite;
+      }
+      .video__icon .circle--inner {
+        background: #e50040;
+        left: 15px;
+        top: 10px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        opacity: 0.8;
+      }
+      .video__icon .circle--inner:after {
+        content: "";
+        display: block;
+        border: 2px solid #e50040;
+        border-radius: 50%;
+        width: 28px;
+        height: 28px;
+        top: -4px;
+        left: -4px;
+        position: absolute;
+        opacity: 0.8;
+        -webkit-animation: circle 2s ease-in-out 0.2s infinite;
+        animation: circle 2s ease-in-out 0.2s infinite;
+      }
+      .video__icon p {
+        color: #000;
+        text-align: center;
+      }
+      .live__text {
+        padding: 0 0 0.35em 0.5em;
+        text-transform: uppercase;
+        font-size: 16px;
+      }
+      @-webkit-keyframes circle {
+        from {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+
+        to {
+          -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+          opacity: 0;
+        }
+      }
+      @keyframes circle {
+        from {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+
+        to {
+          -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+          opacity: 0;
+        }
       }
       </style>
       <div id="spotify">
@@ -65,14 +156,23 @@ class CurrentlyPlayingMobile extends HTMLElement {
           const albumName = data.album.name;
           const artistName = this.getArtistName(data.artists);
           const spotifyContainer = `
-        <div class="spotify__container${isLight ? ' light ' : ' dark '}">
-          <img class="album__cover" title="${albumName}" src="${albumCover}" />
-          <div class="text__container">
-            <div class="song__name">${data.name}</div>
-            <div class="artist__name">${artistName}</div>
+          <div class="video__icon__wrapper">
+            <div class="video__icon">
+              <div class="circle--outer"></div>
+              <div class="circle--inner"></div>
+            </div>
+            <span class="live__text">live</span>
           </div>
-        </div>
-        `;
+          <div class="spotify__container${isLight ? ' light ' : ' dark '}">
+            <p class="spotify__container__text spotify__container__text--primary">
+              While working I usually listen to music.
+            </p>
+            <p class="spotify__container__text spotify__container__text--secondary">
+              Now listening to<span class="song__name"> ${data.name} </span>by<span class="artist__name"> ${artistName} </span>
+            </p>
+            <img class="album__cover" title="${albumName}" src="${albumCover}" />
+          </div>
+          `;
           if (counter === 0) {
             this.shadowRoot.querySelector("#spotify").insertAdjacentHTML("afterbegin", spotifyContainer);
           } else {
@@ -125,7 +225,7 @@ class CurrentlyPlayingMobile extends HTMLElement {
   getArtistName(artists) {
     return artists
       .map(artist => artist.name)
-      .join(', ');
+      .join(' and ');
   }
 
 }
