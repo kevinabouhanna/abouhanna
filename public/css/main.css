@@ -39,7 +39,7 @@ body {
   opacity: 0.01;
   animation: fade 1s ease-in forwards 0.3s;
   scrollbar-color: var(--thumbBG);
-  line-height: 1.5;
+  line-height: 1.6;
   letter-spacing: 0.01em;
 }
 
@@ -352,12 +352,16 @@ a:active {
   transition: fill 0.2s ease-out;
 }
 
-.webring {
-  padding-top: 1em;
+.batata__harra {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.3em;
 }
 
-.batata-harra {
-  margin-top: 1.8em;
+.batata__harra__text {
+  font-size: 0.75rem;
 }
 
 .batata {
@@ -421,6 +425,9 @@ a:active {
     font-size: 3.8rem;
     line-height: 1.658;
     justify-content: flex-start;
+  }
+  .intro__title__name {
+    padding-left: 6px;
   }
   .intro__description {
     margin: 2em 0;
@@ -487,6 +494,12 @@ a:active {
   }
   .contact__inner {
     padding: 4em 0.75em;
+  }
+  .batata__harra {
+    justify-content: center;
+  }
+  .batata__harra__text {
+    font-size: 1rem;
   }
   .harra {
     transform: translate(-8%, -72%);
