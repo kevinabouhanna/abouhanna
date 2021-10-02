@@ -36,7 +36,7 @@ class CurrentlyPlayingMobile extends HTMLElement {
         margin: 0;
       }
       .spotify__container__text--primary {
-        padding: 5em 1.25em 0.25em;
+        padding: 2.5em 1.25em 0.25em;
       }
       .spotify__container__text--secondary {
         padding: 1.25em;
@@ -94,9 +94,10 @@ class CurrentlyPlayingMobile extends HTMLElement {
         text-align: center;
       }
       .live__text {
-        padding: 0 0 0.35em 0.5em;
+        padding: 0 0 0.3em 0.5em;
         text-transform: uppercase;
         font-size: 16px;
+        font-family: monospace;
       }
       @-webkit-keyframes circle {
         from {
