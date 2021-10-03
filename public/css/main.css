@@ -361,7 +361,7 @@ a:active {
 .contact__inner {
   display: grid;
   place-content: center;
-  padding: 0.75em;
+  padding: 0.75em 0.75em 2em 0.75em;
 }
 
 .contact__social {
