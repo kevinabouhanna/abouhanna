@@ -94,10 +94,10 @@ class CurrentlyPlayingMobile extends HTMLElement {
         text-align: center;
       }
       .live__text {
-        padding: 0 0 0.3em 0.5em;
+        padding: 0 0 0.2em 0.5em;
         text-transform: uppercase;
         font-size: 16px;
-        font-family: monospace;
+        font-family: sans-serif;
       }
       @-webkit-keyframes circle {
         from {
