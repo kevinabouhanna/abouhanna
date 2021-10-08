@@ -35,7 +35,7 @@ class Footer extends HTMLElement {
             <a rel="noopener" title="Batata Harra Webring" aria-label="visit Batata Harra Dot Guru" class="text-decoration-none m-1" href="https://batataharra.guru" target="_blank">
               <span>
                 <img class="harra" src="../images/flame.gif" alt="Flame">
-                <span class="batata">🥔</span>
+                <span class="batata"><img alt="Potato" src="../images/batata.webp" /></span>
               </span>
             </a>
             <a title="Visit andoinedebes.codes" aria-label="visit Antoine Debes Dot Codes" class="text-decoration-none p-1" href="https://antoinedebes.codes">

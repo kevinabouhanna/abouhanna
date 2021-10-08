@@ -7,4 +7,5 @@ build
 .cache
 .assets
 .env
-.DS_Stores
+.DS_Store
+./DS_Store
