@@ -405,6 +405,7 @@ a:active {
 
 .batata>img {
   width: 20px;
+  height: 20px;
 }
 
 .harra {
@@ -541,6 +542,7 @@ a:active {
   }
   .batata>img {
     width: 24px;
+    height: 24px;
   }
   .harra {
     transform: translate(-8%, -72%);
