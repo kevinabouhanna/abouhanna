@@ -11,6 +11,6 @@
 ![Lighthouse Performance](public/assets/performance.svg)
 ![Lighthouse SEO](public/assets/seo.svg)
 
-<br/>
+
 
 > **License:** [MIT](https://github.com/kevinabouhanna/abouhanna/blob/main/LICENSE.txt)
