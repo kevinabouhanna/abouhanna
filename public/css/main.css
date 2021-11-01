@@ -249,6 +249,11 @@ a:active {
   background-image: url("../images/times-dark-bg--small.svg");
 }
 
+.profile__picture_container {
+  margin-bottom: 1em;
+  height: 204px;
+}
+
 .profile__container {
   display: flex;
   flex-direction: column;
@@ -484,6 +489,11 @@ a:active {
   }
   .dark .speaker__hight__volume__icon {
     background-image: url("../images/volume-light-bg.svg");
+  }
+  .profile__picture_container {
+    margin-right: 2em;
+    margin-bottom: unset;
+    width: 200px;
   }
   .profile__container {
     flex-direction: row;

@@ -33,7 +33,6 @@ class CurrentlyPlaying extends HTMLElement {
         height: 150px;
         box-shadow: var(--box-shadow);
         border-radius: 50%;
-        margin-bottom: 1em;
         position: relative;
         top: -176px;
         left: 27px;
@@ -86,8 +85,6 @@ class CurrentlyPlaying extends HTMLElement {
         .profile__picture {
           width: 200px;
           height: 200px;
-          margin-right: 2em;
-          margin-bottom: unset;
           position: initial;
           top: initial;
           left: initial;
@@ -101,7 +98,7 @@ class CurrentlyPlaying extends HTMLElement {
           width: 38px;
           left: 100%;
           margin-bottom: 32px;
-          margin-left: -90px;
+          margin-left: -30px;
           position: absolute;
           z-index: 2;
           box-shadow: var(--box-shadow);
