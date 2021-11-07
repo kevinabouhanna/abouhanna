@@ -98,7 +98,7 @@ class CurrentlyPlaying extends HTMLElement {
           width: 38px;
           left: 100%;
           margin-bottom: 32px;
-          margin-left: -30px;
+          margin-left: -34px;
           position: absolute;
           z-index: 2;
           box-shadow: var(--box-shadow);

@@ -480,6 +480,7 @@ a:active {
   }
   .go__back .icon-chevron-left {
     position: absolute;
+    padding-bottom: 4px;
   }
   .go__back::after {
     content: "Go back";
