@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;700&display=swap");
+
 :root {
   --background-color: hsl(0, 0%, 93%);
   --text-color: hsl(250, 30%, 20%);
@@ -11,7 +12,9 @@
   box-sizing: border-box;
 }
 
-*, ::before, ::after {
+*,
+::before,
+::after {
   box-sizing: inherit;
 }
 
@@ -65,7 +68,8 @@ img {
   float: left;
 }
 
-.clearfix:before, .clearfix:after {
+.clearfix:before,
+.clearfix:after {
   content: " ";
   display: table;
 }
@@ -76,7 +80,8 @@ img {
 
 /* show focus only when user is tabbing, you can find it's relevant JS code in main.js*/
 
-body:not(.user__is__tabbing) a:focus, body:not(.user__is__tabbing) button:focus {
+body:not(.user__is__tabbing) a:focus,
+body:not(.user__is__tabbing) button:focus {
   outline: none;
 }
 
@@ -103,7 +108,12 @@ body::-webkit-scrollbar-thumb:hover {
 /* general classes
      ========================================================================== */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   letter-spacing: -0.01em;
 }
 
@@ -293,7 +303,7 @@ a:active {
   justify-content: center;
   color: var(--accent);
   font-size: 2.25rem;
-  background: linear-gradient(to top right,hsl(252deg 60% 65%) 0,hsl(0deg 100% 78% / 71%));
+  background: linear-gradient(to top right, hsl(252deg 60% 65%) 0, hsl(0deg 100% 78% / 71%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -384,7 +394,8 @@ a:active {
   padding-top: 0.2rem;
 }
 
-.contact__social svg:hover, .dark .contact__social svg {
+.contact__social svg:hover,
+.dark .contact__social svg {
   fill: var(--accent);
   transition: fill 0.2s ease-out;
 }
@@ -392,6 +403,35 @@ a:active {
 .dark .contact__social svg:hover {
   fill: var(--hover-color);
   transition: fill 0.2s ease-out;
+}
+
+.batata__harra {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.3em;
+}
+
+.batata__harra__text {
+  font-size: 0.75rem;
+  padding-right: 1.25em;
+}
+
+.batata {
+  display: inline-block;
+  min-width: 40px;
+}
+
+.batata>img {
+  width: 20px;
+  height: 20px;
+}
+
+.harra {
+  position: absolute;
+  transform: translate(-2%, -74%);
+  width: 40px;
 }
 
 /**
@@ -434,66 +474,109 @@ a:active {
   :root {
     --font: 1.6rem/1.63 "IBM Plex Serif", "sans-serif", serif;
   }
+
   h1 {
     font-size: 2.45rem;
   }
+
   .intro__container {
     padding: 1.5em 0.75em;
   }
+
   .intro__title {
     font-size: 3.8rem;
     line-height: 1.658;
     justify-content: flex-start;
   }
+
   .intro__title__name {
     padding-left: 4px;
   }
+
   .intro__description {
     margin: 2em 0;
   }
+
   .speaker__hight__volume__icon {
     height: 20px;
     width: 25px;
   }
+
   .speaker__hight__volume__icon {
     background-image: url("../images/volume-dark-bg.svg");
   }
+
   .dark .speaker__hight__volume__icon {
     background-image: url("../images/volume-light-bg.svg");
   }
+
   .profile__picture_container {
     margin-right: 2em;
     margin-bottom: unset;
     width: 200px;
   }
+
   .profile__container {
     flex-direction: row;
     justify-content: center;
     padding-bottom: unset;
   }
+
   .breadcrumb__container {
     padding: 2em 0;
     margin-left: unset;
   }
+
   .go__back {
     text-decoration: underline;
   }
+
   .go__back .icon-chevron-left {
     position: absolute;
     padding-bottom: 4px;
   }
+
   .go__back::after {
     content: "Go back";
     position: static;
     padding-left: 25px;
     padding-bottom: 8px;
   }
+
   .go__back svg {
     width: 0.75em;
   }
+
   .page__title {
     padding-right: 4em;
   }
+
+  .wrapper {
+    margin: 0 auto;
+  }
+
+  .contact__inner {
+    padding: 4em 0.75em;
+  }
+
+  .batata__harra {
+    justify-content: center;
+  }
+
+  .batata__harra__text {
+    font-size: 1rem;
+  }
+
+  .batata>img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .harra {
+    transform: translate(-8%, -72%);
+    width: fit-content;
+  }
+
   /**
    * white-label airtable desktop
    */
@@ -502,11 +585,13 @@ a:active {
     height: 25px;
     bottom: 7px;
   }
+
   .airtable__embed {
     height: calc(100vh - 244px);
     width: 100%;
     margin: unset;
   }
+
   .airtable__container {
     margin-right: auto;
     margin-left: auto;
@@ -514,26 +599,15 @@ a:active {
     padding-right: 10px;
     padding-left: 10px;
   }
+
   .wrapper {
     margin: 0 auto;
   }
+
   .contact__inner {
     padding: 4em 0.75em;
   }
-  .batata__harra {
-    justify-content: center;
-  }
-  .batata__harra__text {
-    font-size: 1rem;
-  }
-  .batata>img {
-    width: 24px;
-    height: 24px;
-  }
-  .harra {
-    transform: translate(-8%, -72%);
-    width: fit-content;
-  }
+
 }
 
 /* animations
@@ -544,6 +618,7 @@ a:active {
     opacity: 0.01;
     transform: scale(0.994);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -551,12 +626,19 @@ a:active {
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
+
   40% {
     transform: translateY(-8px);
   }
+
   60% {
     transform: translateY(-4px);
   }
