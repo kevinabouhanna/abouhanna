@@ -178,8 +178,8 @@ class CurrentlyPlaying extends HTMLElement {
     }, 20 * 60 * 1000)
 
   }
-  renderSpotify(counter) {
 
+  renderSpotify(counter) {
     if (counter === 0) {
       this.attachShadow({ mode: "open" });
       this.shadowRoot.appendChild(this.template.content.cloneNode(true));
@@ -190,74 +190,60 @@ class CurrentlyPlaying extends HTMLElement {
     let isLight = hrs >= 4 && hrs <= 17;
 
     // e.g. https://batataharra.guru
+    fetch(DATA_FOR_SPOTIFY)
+      .then((response) => response.json())
+      .then(({ isPlaying, data }) => { // isPlaying, author, message
 
+        if (isPlaying) {
+          const albumCover = this.getImageBySize(data.album.images, 'small');
+          const albumName = data.album.name;
+          const artistName = this.getArtistName(data.artists);
+          const spotifyContainer = `
 
-    // fetch(DATA_FOR_SPOTIFY)
-    //   .then((response) => { // isPlaying, author, message
+          <div class="story">
+            <svg viewbox="0 0 100 100">
+              <circle cx="50" cy="50" r="40" />
+            </svg>
+            <a class="profile__picture--cta" href="#open-modal">
+              <img class="profile__picture" src="/images/Profit_Picture.png" alt="Kevin Abou Hanna profile picture" />
+            </a>
+          </div>
+          <div class="user__status__container position-relative">
+            <div class="user__status__circle__badge__container ${isLight ? ' light ' : ' dark '}">
+              <div class="user__status__circle__badge">
+                <i class="icon-music"></i>
+                <div class="user__status__inner__wrapper">
+                  <div id="spotify">
+                    <div class="spotify__container">
+                    <img class="album__cover" title="${albumName}" src="${albumCover}" />
+                    <div class="text__container">
+                      <div class="song__name">${data.name}</div>
+                      <div class="artist__name">${artistName}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+          if (counter === 0) {
+            this.shadowRoot.querySelector("#user-status").insertAdjacentHTML("afterbegin", spotifyContainer);
+          } else {
+            this.shadowRoot.querySelector("#user-status").innerHTML = spotifyContainer;
+          }
+        } else {
+          const spotifyContainer = `
+          <div class="no__status">
+            <img class="profile__picture" src="/images/Profit_Picture.png" alt="Kevin Abou Hanna profile picture" />
+          </div>`;
+          if (counter === 0) {
+            this.shadowRoot.querySelector("#user-status").insertAdjacentHTML("afterbegin", spotifyContainer);
+          } else {
+            this.shadowRoot.querySelector("#user-status").innerHTML = spotifyContainer;
+          }
+        }
 
-    //     const reponseParsed = response.json();
-    //     const {isPlaying, data} = reponseParsed;
-
-    //     if (isPlaying) {
-    //       const albumCover = this.getImageBySize(data.album.images, 'small');
-    //       const albumName = data.album.name;
-    //       const artistName = this.getArtistName(data.artists);
-    //       const spotifyContainer = `
-
-    //       <div class="story">
-    //         <svg viewbox="0 0 100 100">
-    //           <circle cx="50" cy="50" r="40" />
-    //         </svg>
-    //         <a class="profile__picture--cta" href="#open-modal">
-    //           <img class="profile__picture" src="/images/Profit_Picture.png" alt="Kevin Abou Hanna profile picture" />
-    //         </a>
-    //       </div>
-    //       <div class="user__status__container position-relative">
-    //         <div class="user__status__circle__badge__container ${isLight ? ' light ' : ' dark '}">
-    //           <div class="user__status__circle__badge">
-    //             <i class="icon-music"></i>
-    //             <div class="user__status__inner__wrapper">
-    //               <div id="spotify">
-    //                 <div class="spotify__container">
-    //                 <img class="album__cover" title="${albumName}" src="${albumCover}" />
-    //                 <div class="text__container">
-    //                   <div class="song__name">${data.name}</div>
-    //                   <div class="artist__name">${artistName}</div>
-    //                 </div>
-    //               </div>
-    //             </div>
-    //           </div>
-    //         </div>
-    //       </div>
-    //     `;
-    //       if (counter === 0) {
-    //         this.shadowRoot.querySelector("#user-status").insertAdjacentHTML("afterbegin", spotifyContainer);
-    //       } else {
-    //         this.shadowRoot.querySelector("#user-status").innerHTML = spotifyContainer;
-    //       }
-    //     } else {
-    //       const spotifyContainer = `
-    //       <div class="no__status">
-    //         <img class="profile__picture" src="/images/Profit_Picture.png" alt="Kevin Abou Hanna profile picture" />
-    //       </div>`;
-    //       if (counter === 0) {
-    //         this.shadowRoot.querySelector("#user-status").insertAdjacentHTML("afterbegin", spotifyContainer);
-    //       } else {
-    //         this.shadowRoot.querySelector("#user-status").innerHTML = spotifyContainer;
-    //       }
-    //     }
-
-    //   }).catch(()=>{
-        
-
-        
-    //   })
-      const spotifyContainer = `
-      <div class="no__status">
-        <img class="profile__picture" src="/images/Profit_Picture.png" alt="Kevin Abou Hanna profile picture" />
-      </div>`;
-      this.shadowRoot.querySelector("#user-status").insertAdjacentHTML("afterbegin", spotifyContainer);
-    
+      });
   }
 
   /**
