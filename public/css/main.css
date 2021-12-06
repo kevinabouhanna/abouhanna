@@ -261,6 +261,8 @@ a:active {
 
 .profile__picture_container {
   height: 204px;
+  display: flex;
+  align-items: center;
 }
 
 .profile__container {
@@ -304,7 +306,7 @@ a:active {
   font-size: 2.25rem;
 }
 
-.intro__title>span {
+.intro__title > span {
   font-size: 0.6em;
   display: flex;
   align-self: center;
@@ -418,7 +420,7 @@ a:active {
   min-width: 40px;
 }
 
-.batata>img {
+.batata > img {
   width: 20px;
   height: 20px;
 }
@@ -562,7 +564,7 @@ a:active {
     font-size: 1rem;
   }
 
-  .batata>img {
+  .batata > img {
     width: 24px;
     height: 24px;
   }
@@ -602,7 +604,6 @@ a:active {
   .contact__inner {
     padding: 4em 0.75em;
   }
-
 }
 
 /* animations
@@ -621,7 +622,6 @@ a:active {
 }
 
 @keyframes bounce {
-
   0%,
   20%,
   50%,
