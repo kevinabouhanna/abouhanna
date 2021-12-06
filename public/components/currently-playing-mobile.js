@@ -1,5 +1,5 @@
 
-const DATA_FOR_SPOTIFY_MOBILE = `https://wpshortcuts.studio/wp-json/spotify/v1/playing/2`;
+const DATA_FOR_SPOTIFY_MOBILE = `https://wpshortcuts.mystagingwebsite.com/wp-json/spotify/v1/playing/2`;
 class CurrentlyPlayingMobile extends HTMLElement {
   constructor() {
     super();
