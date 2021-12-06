@@ -1,5 +1,5 @@
 
-const DATA_FOR_SPOTIFY = `https://wpshortcuts.studio/wp-json/spotify/v1/playing/2`;
+const DATA_FOR_SPOTIFY = `https://wpshortcuts.mystagingwebsite.com/wp-json/spotify/v1/playing/2`;
 class CurrentlyPlaying extends HTMLElement {
   constructor() {
     super();
