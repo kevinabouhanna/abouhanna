@@ -33,45 +33,47 @@
 </head>
 
 <body>
-  <div id="open-modal" class="modal-window">
-    <a href="#" title="Close" class="modal-close"><i class="icon-times"></i></a>
-    <div>
-      <currently-playing-mobile></currently-playing-mobile>
+  <main>
+    <div id="open-modal" class="modal-window">
+      <a href="#" title="Close" class="modal-close"><i class="icon-times"></i></a>
+      <div>
+        <currently-playing-mobile></currently-playing-mobile>
+      </div>
     </div>
-  </div>
-  <div class="intro__container">
-    <div class="profile__container">
-      <div class="profile__picture_container">
-        <currently-playing></currently-playing>
+    <section class="intro__container">
+      <div class="profile__container">
+        <div class="profile__picture_container">
+          <currently-playing></currently-playing>
+        </div>
+        <div>
+          <h1 id="greetingHuman" class="intro__title"></h1>
+          <span class="intro__title__name">My name is
+            <strong>Kevin Abou Hanna</strong>
+            <button aria-label="pronounce my name" class="speaker__high__volume cursor-pointer" type="button"
+              onclick="pronounceMyName()">
+              <i class="speaker__hight__volume__icon"></i>
+            </button>
+            <!-- Your audio source -->
+            <audio id="audio" class="hidden" src="assets/my_name.mp3"></audio>
+          </span>
+        </div>
       </div>
       <div>
-        <h1 id="greetingHuman" class="intro__title"></h1>
-        <span class="intro__title__name">My name is
-          <strong>Kevin Abou Hanna</strong>
-          <button aria-label="pronounce my name" class="speaker__high__volume cursor-pointer" type="button"
-            onclick="pronounceMyName()">
-            <i class="speaker__hight__volume__icon"></i>
-          </button>
-          <!-- Your audio source -->
-          <audio id="audio" class="hidden" src="assets/my_name.mp3"></audio>
-        </span>
+        <p class="intro__description">
+          Designing, developing, and managing digital products are what I do.
+          <br>
+          In my pastime I like to read; <a href="now.html">here's my awesome reading list!</a>
+        </p>
       </div>
-    </div>
-    <section>
-      <p class="intro__description">
-        Designing, developing, and managing digital products are what I do.
-        <br>
-        In my pastime I like to read; <a href="now.html">here's my awesome reading list!</a>
-      </p>
     </section>
-  </div>
-  <div class="scroll__to__bottom">
-    <a aria-label="scroll to the bottom" class="bounce text-decoration-none" href="#contact">
-      <i class="icon-chevron-down"></i>
-    </a>
-  </div>
-
+    <div class="scroll__to__bottom">
+      <a aria-label="scroll to the bottom" class="bounce text-decoration-none" href="#contact">
+        <i class="icon-chevron-down"></i>
+      </a>
+    </div>
+  </main>
   <footer-component></footer-component>
+
   <!-- Scripts -->
   <script type="module" src="js/main.js"></script>
   <script>

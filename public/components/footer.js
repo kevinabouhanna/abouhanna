@@ -4,7 +4,7 @@ class Footer extends HTMLElement {
   }
   connectedCallback() {
     this.innerHTML = `
-        <section id="contact" class="accent__bg">
+        <footer id="contact" class="accent__bg">
           <div class="contact__inner wrapper">
             <h2 class="contact__heading">let's build something together</h2>
             <div>
@@ -25,7 +25,7 @@ class Footer extends HTMLElement {
               </div>
             </div>
           </div>
-        </section>
+        </footer>
         <div class="webring">
         <p class="batata__harra text-align-center">
           <span class="batata__harra__text">A proud member of Batata Harra Webring</span>
