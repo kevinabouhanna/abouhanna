@@ -105,4 +105,36 @@ document.addEventListener("DOMContentLoaded", function () {
       footer.style.top = `${placeholderTop}px` // match footer top value with placeholder's top value
     }
   }
+
+  // Fix scroll not working when mouse/touch is over the parallax footer
+  let ts;
+  function handleScrollOverFixedFooter(event) {
+    debugger
+    if (event.defaultPrevented) {
+      // This is not a passive event
+      event.preventDefault()
+      document.querySelector(".parallax-container").scrollTop += event?.deltaY || 0
+
+    } else {
+      document.querySelector(".parallax-container").scrollTop += event?.deltaY || 0
+    }
+  }
+
+  function handleTouchScrollOverFixedFooterStart(event) {
+    if (event?.touches[0]?.clientY) {
+      ts = event.touches[0].clientY
+    }
+  }
+  function handleTouchScrollOverFixedFooterEnd(event) {
+    const te = event.changedTouches[0].clientY
+    if (ts > te + 5) {
+      document.querySelector(".parallax-container").scrollTop += 8
+    } else if (ts < te) {
+      document.querySelector(".parallax-container").scrollTop -= 8
+    }
+  }
+
+  window.addEventListener('wheel', handleScrollOverFixedFooter)
+  document.querySelector("footer-component").addEventListener("touchstart", handleTouchScrollOverFixedFooterStart)
+  document.querySelector("footer-component").addEventListener("touchmove", handleTouchScrollOverFixedFooterEnd)
 })
