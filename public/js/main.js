@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Fix scroll not working when mouse/touch is over the parallax footer
   let ts;
   function handleScrollOverFixedFooter(event) {
-    debugger
+    
     if (event.defaultPrevented) {
       // This is not a passive event
       event.preventDefault()
