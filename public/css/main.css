@@ -608,26 +608,18 @@ a:active {
 
 /* parallax
      ========================================================================== */
-html,
-body {
-  overflow-x: hidden;
-  width: 100%;
-}
 main {
   position: relative;
   z-index: 10;
   background-color: var(--background-color);
+  min-height: 100vh;
 }
 .parallax-placeholder {
   z-index: 1;
-}
-.parallax-container {
-  height: 100vh;
-  overflow-y: scroll;
   position: relative;
 }
-footer-component {
-  position: fixed;
+.footer-container {
+  position: sticky;
   bottom: 0;
   width: 100%;
   z-index: 5;
