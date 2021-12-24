@@ -95,4 +95,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 })
-
