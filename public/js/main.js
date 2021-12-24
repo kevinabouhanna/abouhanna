@@ -40,7 +40,8 @@ window.onfocus = function () { document.title = 'Kevin Abou Hanna - Product Desi
 
 document.addEventListener("DOMContentLoaded", function () {
   const placeholder = document.querySelector('.parallax-placeholder')
-  const footer = document.querySelector('footer-component')
+  const footer = document.querySelector('.footer-container')
+
   let placeholderTop,
     ticking
 
@@ -49,23 +50,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // On DOM Content Load, set placeholder height to be equal to footer height
   updateHolderHeight()
   checkFooterHeight()
-  let intervalIndex = 0;
-  const myInterval = setInterval(updateFooterWidth, 250)
+
   // On window resize, update placeholder height to be equal to footer height
   function onResize() {
     updateHolderHeight()
     checkFooterHeight()
-    updateFooterWidth()
-  }
-
-  function updateFooterWidth() {
-    if (intervalIndex > 6) {
-      clearInterval(myInterval);
-    }
-    var scrollDiv = document.body.querySelector('.parallax-container');
-    var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
-    footer.style.width = `calc(100% - ${scrollbarWidth}px)`;
-    intervalIndex++;
   }
 
   // Placeholder should always match footer height
@@ -105,36 +94,4 @@ document.addEventListener("DOMContentLoaded", function () {
       footer.style.top = `${placeholderTop}px` // match footer top value with placeholder's top value
     }
   }
-
-  // Fix scroll not working when mouse/touch is over the parallax footer
-  let ts;
-  function handleScrollOverFixedFooter(event) {
-    
-    if (event.defaultPrevented) {
-      // This is not a passive event
-      event.preventDefault()
-      document.querySelector(".parallax-container").scrollTop += event?.deltaY || 0
-
-    } else {
-      document.querySelector(".parallax-container").scrollTop += event?.deltaY || 0
-    }
-  }
-
-  function handleTouchScrollOverFixedFooterStart(event) {
-    if (event?.touches[0]?.clientY) {
-      ts = event.touches[0].clientY
-    }
-  }
-  function handleTouchScrollOverFixedFooterEnd(event) {
-    const te = event.changedTouches[0].clientY
-    if (ts > te + 5) {
-      document.querySelector(".parallax-container").scrollTop += 8
-    } else if (ts < te) {
-      document.querySelector(".parallax-container").scrollTop -= 8
-    }
-  }
-
-  window.addEventListener('wheel', handleScrollOverFixedFooter)
-  document.querySelector("footer-component").addEventListener("touchstart", handleTouchScrollOverFixedFooterStart)
-  document.querySelector("footer-component").addEventListener("touchmove", handleTouchScrollOverFixedFooterEnd)
 })
