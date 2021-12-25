@@ -1,134 +1,166 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <title>Kevin Abou Hanna</title>
+    <meta name="description" content="Kevin Abou Hanna" />
+    <meta name="author" content="Kevin Abou Hanna" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="utf-8">
-  <title>Kevin Abou Hanna</title>
-  <meta name="description" content="Kevin Abou Hanna">
-  <meta name="author" content="Kevin Abou Hanna">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Kevin Abou Hanna" />
+    <meta property="og:description" content="Kevin Abou Hanna" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://abouhanna.com/" />
+    <meta
+      property="og:image"
+      content="https://res.cloudinary.com/abouhanna/image/upload/v1627859612/abouhanna.com/abouhanna_meta_nb2cps.png"
+    />
 
-  <meta property="og:title" content="Kevin Abou Hanna">
-  <meta property="og:description" content="Kevin Abou Hanna">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:url" content="https://abouhanna.com/">
-  <meta property="og:image"
-    content="https://res.cloudinary.com/abouhanna/image/upload/v1627859612/abouhanna.com/abouhanna_meta_nb2cps.png">
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="icon.png" />
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="icon" type="image/png" href="/favicon-32x32.png">
-  <link rel="apple-touch-icon" href="icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/icons.css" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/icons.css">
+    <meta name="theme-color" content="#ededed" />
 
-  <meta name="theme-color" content="#ededed">
+    <!-- components -->
+    <script src="components/footer.js" type="text/javascript" defer></script>
+    <script
+      src="components/currently-playing.js"
+      type="text/javascript"
+      defer
+    ></script>
+    <script
+      src="components/currently-playing-mobile.js"
+      type="text/javascript"
+      defer
+    ></script>
+  </head>
 
-  <!-- components -->
-  <script src="components/footer.js" type="text/javascript" defer></script>
-  <script src="components/currently-playing.js" type="text/javascript" defer></script>
-  <script src="components/currently-playing-mobile.js" type="text/javascript" defer></script>
-</head>
-
-<body>
-  <main>
-    <div id="open-modal" class="modal-window">
-      <a href="#" title="Close" class="modal-close"><i class="icon-times"></i></a>
-      <div>
-        <currently-playing-mobile></currently-playing-mobile>
+  <body>
+    <main>
+      <div id="open-modal" class="modal-window">
+        <a href="#" title="Close" class="modal-close"
+          ><i class="icon-times"></i
+        ></a>
+        <div>
+          <currently-playing-mobile></currently-playing-mobile>
+        </div>
       </div>
-    </div>
-    <section class="intro__container">
-      <div class="profile__container">
-        <div class="profile__picture_container">
-          <currently-playing></currently-playing>
+      <section class="intro__container">
+        <div class="profile__container">
+          <div class="profile__picture_container">
+            <currently-playing></currently-playing>
+          </div>
+          <div>
+            <h1 id="greetingHuman" class="intro__title"></h1>
+            <span class="intro__title__name"
+              >My name is
+              <strong>Kevin Abou Hanna</strong>
+              <button
+                aria-label="pronounce my name"
+                class="speaker__high__volume cursor-pointer"
+                type="button"
+                onclick="pronounceMyName()"
+              >
+                <i class="speaker__hight__volume__icon"></i>
+              </button>
+              <!-- Your audio source -->
+              <audio id="audio" class="hidden" src="assets/my_name.mp3"></audio>
+            </span>
+          </div>
         </div>
         <div>
-          <h1 id="greetingHuman" class="intro__title"></h1>
-          <span class="intro__title__name">My name is
-            <strong>Gaby Karam</strong>
-            <button aria-label="pronounce my name" class="speaker__high__volume cursor-pointer" type="button"
-              onclick="pronounceMyName()">
-              <i class="speaker__hight__volume__icon"></i>
-            </button>
-            <!-- Your audio source -->
-            <audio id="audio" class="hidden" src="assets/my_name.mp3"></audio>
-          </span>
+          <p class="intro__description">
+            Designing, developing, and managing digital products are what I do.
+          </p>
         </div>
+      </section>
+      <div class="scroll__to__bottom">
+        <span
+          aria-label="scroll to the bottom"
+          class="bounce text-decoration-none cursor-pointer"
+        >
+          <i class="icon-chevron-down"></i>
+        </span>
       </div>
-      <div>
-        <p class="intro__description">
-          Designing, developing, and managing digital products are what I do.
-        </p>
-      </div>
-    </section>
-    <div class="scroll__to__bottom">
-      <a aria-label="scroll to the bottom" class="bounce text-decoration-none" href="#contact">
-        <i class="icon-chevron-down"></i>
-      </a>
+    </main>
+    <div class="parallax-placeholder"></div>
+    <div class="footer-container">
+      <footer-component></footer-component>
     </div>
-  </main>
-  <div class="parallax-placeholder"></div>
-  <div class="footer-container">
-    <footer-component></footer-component>
-  </div>
-  <!-- Scripts -->
-  <script type="module" src="js/main.js"></script>
-  <script>
-    let context = new AudioContext(); // Make it crossbrowser
+    <!-- Scripts -->
+    <script type="module" src="js/main.js"></script>
+    <script>
+      const scrollToBottom = document.querySelectorAll(".scroll__to__bottom");
 
-    function unlock() {
-      // create empty buffer and play it
-      let buffer = context.createBuffer(1, 1, 22050);
-      let source = context.createBufferSource();
-      source.buffer = buffer;
-      source.connect(context.destination);
+      scrollToBottom.forEach((element) => {
+        element.addEventListener("click", () => {
+          let counter = 0;
+          const interval = setInterval(function () {
+            if (counter > 3) {
+              clearInterval(interval);
+            }
+            window.scrollTo(0, document.body.scrollHeight);
+            counter++;
+          });
+        });
+      });
+      let context = new AudioContext(); // Make it crossbrowser
 
-      // play the file. noteOn is the older version of start()
-      source.start ? source.start(0) : source.noteOn(0);
+      function unlock() {
+        // create empty buffer and play it
+        let buffer = context.createBuffer(1, 1, 22050);
+        let source = context.createBufferSource();
+        source.buffer = buffer;
+        source.connect(context.destination);
 
-      // by checking the play state after some time, we know if we're really unlocked
-      setTimeout(function () {
-        if (
-          source.playbackState === source.PLAYING_STATE ||
-          source.playbackState === source.FINISHED_STATE
-        ) { }
-      }, 0);
-    }
+        // play the file. noteOn is the older version of start()
+        source.start ? source.start(0) : source.noteOn(0);
 
-    // Try to unlock
-    unlock();
+        // by checking the play state after some time, we know if we're really unlocked
+        setTimeout(function () {
+          if (
+            source.playbackState === source.PLAYING_STATE ||
+            source.playbackState === source.FINISHED_STATE
+          ) {
+          }
+        }, 0);
+      }
 
-    let play = function play(audioBuffer) {
-      let source = context.createBufferSource();
-      source.buffer = audioBuffer;
-      source.connect(context.destination);
-      source.start();
-    };
-    let yodelBuffer = void 0;
+      // Try to unlock
+      unlock();
 
-    let URL = "./assets/my_name.mp3";
-    // The Promise-based syntax for BaseAudioContext.decodeAudioData() is not supported in Safari(Webkit).
-    window
-      .fetch(URL)
-      .then((response) => response.arrayBuffer())
-      .then((arrayBuffer) =>
-        context.decodeAudioData(
-          arrayBuffer,
-          (audioBuffer) => {
-            yodelBuffer = audioBuffer;
-          },
-          (error) => console.error(error)
-        )
-      );
+      let play = function play(audioBuffer) {
+        let source = context.createBufferSource();
+        source.buffer = audioBuffer;
+        source.connect(context.destination);
+        source.start();
+      };
+      let yodelBuffer = void 0;
 
-    const pronounceMyName = () => {
-      play(yodelBuffer);
-    };
+      let URL = "./assets/my_name.mp3";
+      // The Promise-based syntax for BaseAudioContext.decodeAudioData() is not supported in Safari(Webkit).
+      window
+        .fetch(URL)
+        .then((response) => response.arrayBuffer())
+        .then((arrayBuffer) =>
+          context.decodeAudioData(
+            arrayBuffer,
+            (audioBuffer) => {
+              yodelBuffer = audioBuffer;
+            },
+            (error) => console.error(error)
+          )
+        );
 
-  </script>
-</body>
-
+      const pronounceMyName = () => {
+        play(yodelBuffer);
+      };
+    </script>
+  </body>
 </html>
