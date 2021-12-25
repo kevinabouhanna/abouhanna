@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Placeholder should always match footer height
   function updateHolderHeight() {
-    placeholder.style.height = `${footer.offsetHeight}px`
+    // placeholder.style.height = `${footer.offsetHeight}px`
   }
 
   function checkFooterHeight() {
