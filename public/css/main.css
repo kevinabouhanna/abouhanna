@@ -427,8 +427,10 @@ a:active {
 
 .harra {
   position: absolute;
-  transform: translate(-2%, -74%);
-  width: 40px;
+  transform: translate(-10%, -86%);
+  width: 48px;
+  height: 48px;
+  max-width: 100%
 }
 
 /**
