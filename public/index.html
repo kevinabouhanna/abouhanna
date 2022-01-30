@@ -120,6 +120,8 @@
         source.start ? source.start(0) : source.noteOn(0);
 
         // by checking the play state after some time, we know if we're really unlocked
+        // TODO: https://usefulangle.com/post/280/settimeout-setinterval-on-inactive-tab
+        // fix this https://www.w3.org/TR/page-visibility/
         setTimeout(function () {
           if (
             source.playbackState === source.PLAYING_STATE ||
