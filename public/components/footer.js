@@ -38,7 +38,7 @@ class Footer extends HTMLElement {
               <span class="batata"><img alt="Potato" src="../images/batata.webp" /></span>
             </span>
           </a>
-          <a title="Visit andoinedebes.codes" aria-label="visit Antoine Debes Dot Codes" class="text-decoration-none p-1" href="https://antoinedebes.codes">
+          <a title="Visit andoinedebes.com" aria-label="visit Antoine Debes Dot Com" class="text-decoration-none p-1" href="https://antoinedebes.com">
             <i class="icon-chevron-right"></i>
           </a>
         </p>
