@@ -361,37 +361,6 @@ a:active {
   transition: fill 0.2s ease-out;
 }
 
-.batata__harra {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 0.3em;
-}
-
-.batata__harra__text {
-  font-size: 0.75rem;
-  padding-right: 1.25em;
-}
-
-.batata {
-  display: inline-block;
-  min-width: 40px;
-}
-
-.batata > img {
-  width: 20px;
-  height: 20px;
-}
-
-.harra {
-  position: absolute;
-  transform: translate(-10%, -86%);
-  width: 48px;
-  height: 48px;
-  max-width: 100%
-}
-
 .accent__bg {
   background-color: var(--accent-bg);
 }
@@ -479,24 +448,6 @@ a:active {
     padding: 4em 0.75em;
   }
 
-  .batata__harra {
-    justify-content: center;
-  }
-
-  .batata__harra__text {
-    font-size: 1rem;
-  }
-
-  .batata > img {
-    width: 24px;
-    height: 24px;
-  }
-
-  .harra {
-    transform: translate(-8%, -72%);
-    width: fit-content;
-  }
-  
   .wrapper {
     margin: 0 auto;
   }
