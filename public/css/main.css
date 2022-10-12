@@ -259,6 +259,13 @@ a:active {
   background-image: url("../images/times-dark-bg--small.svg");
 }
 
+.profile__picture {
+  width: 150px;
+  height: 150px;
+  box-shadow: var(--box-shadow);
+  border-radius: 50%;
+}
+
 .profile__picture_container {
   height: 204px;
   display: flex;
@@ -420,7 +427,7 @@ a:active {
   }
 
   .profile__picture_container {
-    margin-right: 2em;
+    margin-top: 0.5em;
     margin-bottom: unset;
     width: 200px;
   }
