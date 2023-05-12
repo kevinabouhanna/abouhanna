@@ -343,6 +343,31 @@ a:active {
   padding: 0.75em 0.75em 2em 0.75em;
 }
 
+.contact__social {
+  display: flex;
+}
+
+.contact__social a {
+  width: 2rem;
+  margin-right: 1.6rem;
+  font-size: 0;
+}
+
+.contact__social .github__icon {
+  padding-top: 0.2rem;
+}
+
+.contact__social svg:hover,
+.dark .contact__social svg {
+  fill: var(--accent);
+  transition: fill 0.2s ease-out;
+}
+
+.dark .contact__social svg:hover {
+  fill: var(--hover-color);
+  transition: fill 0.2s ease-out;
+}
+
 .accent__bg {
   background-color: var(--accent-bg);
 }
