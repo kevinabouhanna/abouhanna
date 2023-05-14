@@ -27,131 +27,15 @@
 
     <meta name="theme-color" content="#ededed" />
 
-    <!-- components -->
-    <script src="components/footer.js" type="text/javascript" defer></script>
-    <script
-      src="components/currently-playing.js"
-      type="text/javascript"
-      defer
-    ></script>
-    <script
-      src="components/currently-playing-mobile.js"
-      type="text/javascript"
-      defer
-    ></script>
   </head>
 
   <body>
     <main>
-      <section class="intro__container">
-        <div class="profile__container">
-          <div class="profile__picture_container">
-              <img class="profile__picture" src="/images/Profit_Picture.png" alt="Kevin Abou Hanna profile picture" />
-          </div>
-          <div>
-            <h1 id="greetingHuman" class="intro__title"></h1>
-            <span class="intro__title__name"
-              >My name is
-              <strong>Kevin Abou Hanna</strong>
-              <button
-                aria-label="pronounce my name"
-                class="speaker__high__volume cursor-pointer"
-                type="button"
-                onclick="pronounceMyName()"
-              >
-                <i class="speaker__hight__volume__icon"></i>
-              </button>
-              <!-- Your audio source -->
-              <audio id="audio" class="hidden" src="assets/my_name.mp3"></audio>
-            </span>
-          </div>
-        </div>
-        <div>
-          <p class="intro__description">
-            Designing, developing, and managing digital products are what I do.
-          </p>
-        </div>
-      </section>
-      <div class="scroll__to__bottom">
-        <span class="bounce text-decoration-none cursor-pointer">
-          <i class="icon-chevron-down"></i>
-        </span>
-      </div>
+      <p>Hello World!</p>
     </main>
-    <div class="parallax-placeholder"></div>
-    <div class="footer-container">
-      <footer-component></footer-component>
-    </div>
+  
     <!-- Scripts -->
     <script type="module" src="js/main.js"></script>
-    <script>
-      const scrollToBottom = document.querySelectorAll(".scroll__to__bottom");
-
-      scrollToBottom.forEach((element) => {
-        element.addEventListener("click", () => {
-          let counter = 0;
-          const interval = setInterval(function () {
-            if (counter > 3) {
-              clearInterval(interval);
-            }
-            window.scrollTo(0, document.body.scrollHeight);
-            counter++;
-          });
-        });
-      });
-      let context = new AudioContext(); // Make it crossbrowser
-
-      function unlock() {
-        // create empty buffer and play it
-        let buffer = context.createBuffer(1, 1, 22050);
-        let source = context.createBufferSource();
-        source.buffer = buffer;
-        source.connect(context.destination);
-
-        // play the file. noteOn is the older version of start()
-        source.start ? source.start(0) : source.noteOn(0);
-
-        // by checking the play state after some time, we know if we're really unlocked
-        // TODO: https://usefulangle.com/post/280/settimeout-setinterval-on-inactive-tab
-        // fix this https://www.w3.org/TR/page-visibility/
-        setTimeout(function () {
-          if (
-            source.playbackState === source.PLAYING_STATE ||
-            source.playbackState === source.FINISHED_STATE
-          ) {
-          }
-        }, 0);
-      }
-
-      // Try to unlock
-      unlock();
-
-      let play = function play(audioBuffer) {
-        let source = context.createBufferSource();
-        source.buffer = audioBuffer;
-        source.connect(context.destination);
-        source.start();
-      };
-      let yodelBuffer = void 0;
-
-      let URL = "./assets/my_name.mp3";
-      // The Promise-based syntax for BaseAudioContext.decodeAudioData() is not supported in Safari(Webkit).
-      window
-        .fetch(URL)
-        .then((response) => response.arrayBuffer())
-        .then((arrayBuffer) =>
-          context.decodeAudioData(
-            arrayBuffer,
-            (audioBuffer) => {
-              yodelBuffer = audioBuffer;
-            },
-            (error) => console.error(error)
-          )
-        );
-
-      const pronounceMyName = () => {
-        play(yodelBuffer);
-      };
-    </script>
+   
   </body>
 </html>
