@@ -31,7 +31,40 @@
 
   <body>
     <main>
-      <h1>Hello World!</h1>
+      <section class="intro__container">
+        <div class="profile__container">
+          <div class="profile__picture_container">
+              <img class="profile__picture" src="/images/Profit_Picture.png" alt="Kevin Abou Hanna profile picture" />
+          </div>
+          <div>
+            <h1 id="greetingHuman" class="intro__title"></h1>
+            <span class="intro__title__name"
+              >My name is
+              <strong>Kevin Abou Hanna</strong>
+              <button
+                aria-label="pronounce my name"
+                class="speaker__high__volume cursor-pointer"
+                type="button"
+                onclick="pronounceMyName()"
+              >
+                <i class="speaker__hight__volume__icon"></i>
+              </button>
+              <!-- Your audio source -->
+              <audio id="audio" class="hidden" src="assets/my_name.mp3"></audio>
+            </span>
+          </div>
+        </div>
+        <div>
+          <p class="intro__description">
+            Designing, developing, and managing digital products are what I do.
+          </p>
+        </div>
+      </section>
+      <div class="scroll__to__bottom">
+        <span class="bounce text-decoration-none cursor-pointer">
+          <i class="icon-chevron-down"></i>
+        </span>
+      </div>
     </main>
   
     <!-- Scripts -->
