@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'abou-hanna';
+  src: url('../assets/fonts/abou-hanna.eot');
+  src: url('../assets/fonts/abou-hanna.eot') format('embedded-opentype'), url('../assets/fonts/abou-hanna.ttf') format('truetype'), url('../assets/fonts/abou-hanna.woff') format('woff'), url('../assets/fonts/abou-hanna.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'abou-hanna' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevron-down:before {
+  content: "\e900";
+}
+
+.icon-chevron-right:before {
+  content: "\e901";
+}
+
+.icon-chevron-left:before {
+  content: "\e904";
+}
+
+.icon-loader:before {
+  content: "\e902";
+}
+
+.icon-loader-white:before {
+  content: "\e903";
+  color: #ccbeaf;
+}
