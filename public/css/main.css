@@ -376,29 +376,9 @@ a:active {
   padding: 0 0.3em;
 }
 
-.batata__harra__text {
+.stage__zero__text {
   font-size: 0.75rem;
   padding-right: 1.25em;
-}
-
-.batata {
-  display: inline-block;
-  min-width: 40px;
-  font-size: 16px;
-  font-weight: 900;
-}
-
-.batata > img {
-  width: 20px;
-  height: 20px;
-}
-
-.harra {
-  position: absolute;
-  transform: translate(-2%, -60%);
-  width: 38px;
-  height: 38px;
-  max-width: 100%
 }
 
 .accent__bg {
@@ -492,7 +472,7 @@ a:active {
     justify-content: center;
   }
 
-  .batata__harra__text {
+  .stage__zero__text {
     font-size: 1rem;
   }
 
