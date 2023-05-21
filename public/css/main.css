@@ -384,6 +384,8 @@ a:active {
 .batata {
   display: inline-block;
   min-width: 40px;
+  font-size: 16px;
+  font-weight: 900;
 }
 
 .batata > img {
@@ -393,28 +395,10 @@ a:active {
 
 .harra {
   position: absolute;
-  transform: translate(-10%, -86%);
-  width: 48px;
-  height: 48px;
+  transform: translate(-2%, -60%);
+  width: 38px;
+  height: 38px;
   max-width: 100%
-}
-
-/**
-   * white-label airtable mobile
-   */
-
-#white__labeling__airtable {
-  position: absolute;
-  width: calc(100vw - 18px);
-  height: 27px;
-  left: 9px;
-  bottom: 5px;
-  background-color: var(--background-color);
-  border-top: 1px solid #cacaca;
-}
-
-.dark #white__labeling__airtable {
-  border-top: 1px solid #222;
 }
 
 .accent__bg {
@@ -520,29 +504,6 @@ a:active {
   .harra {
     transform: translate(-8%, -72%);
     width: fit-content;
-  }
-
-  /**
-   * white-label airtable desktop
-   */
-  #white__labeling__airtable {
-    width: calc(100% - 17px);
-    height: 25px;
-    bottom: 7px;
-  }
-
-  .airtable__embed {
-    height: calc(100vh - 244px);
-    width: 100%;
-    margin: unset;
-  }
-
-  .airtable__container {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1440px;
-    padding-right: 10px;
-    padding-left: 10px;
   }
 
   .wrapper {
