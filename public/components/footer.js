@@ -28,14 +28,14 @@ class Footer extends HTMLElement {
         </footer>
         <div class="webring">
         <p class="batata__harra text-align-center">
-          <span class="batata__harra__text">A proud member of Batata Harra Webring</span>
+          <span class="batata__harra__text">A proud member of Stage Zero Webring</span>
           <a title="Visit gabykaram.com" aria-label="visit Gaby Karam Dot Com" class="text-decoration-none p-1" href="https://gabykaram.com">
             <i class="icon-chevron-left"></i>
           </a>
           <a rel="noopener" title="Batata Harra Webring" aria-label="visit Batata Harra Dot Guru" class="text-decoration-none m-1" href="https://batataharra.guru">
             <span>
               <img class="harra" src="../images/flame.gif" alt="Flame">
-              <span class="batata"><img alt="Potato" src="../images/batata.webp" /></span>
+              <span class="batata">SZ</span>
             </span>
           </a>
           <a title="Visit andoinedebes.com" aria-label="visit Antoine Debes Dot Com" class="text-decoration-none p-1" href="https://antoinedebes.com">
