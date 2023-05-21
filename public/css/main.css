@@ -476,9 +476,8 @@ a:active {
     font-size: 1rem;
   }
 
-  .batata > img {
-    width: 24px;
-    height: 24px;
+  .batata svg {
+    margin-bottom: 3px
   }
 
   .harra {

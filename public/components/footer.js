@@ -32,14 +32,12 @@ class Footer extends HTMLElement {
           <a title="Visit gabykaram.com" aria-label="visit Gaby Karam Dot Com" class="text-decoration-none p-1" href="https://gabykaram.com">
             <i class="icon-chevron-left"></i>
           </a>
-          <a rel="noopener" title="Batata Harra Webring" aria-label="visit Batata Harra Dot Guru" class="text-decoration-none m-1" href="https://batataharra.guru">
-            <span>
+          <a rel="noopener" title="Stage Zero Webring" aria-label="Visit Stage Zero Webring" class="text-decoration-none m-1" href="https://batataharra.guru">
               <span class="batata"><svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1.96077 0H7.36978V2.65737H3.04257L2.97496 2.79024L6.58097 9.25651C7.31719 10.5557 7.68531 11.5448 7.68531 12.2239C7.68531 13.715 7.18197 14.8075 6.17529 15.5013H0.202838V12.9325H4.86811L4.93573 12.7997L0.878965 5.64691C0.292988 4.61349 0 3.77199 0 3.12241C0 1.58704 0.653589 0.546237 1.96077 0Z" fill="#2B2B2B"/>
               <path d="M17.9775 2.59094L12.6361 12.9325H18V15.5013H9.36811V12.9768L14.687 2.65737H9.36811V0H17.9775V2.59094Z" fill="#FEB522"/>
               </svg>
               </span>
-            </span>
           </a>
           <a title="Visit andoinedebes.com" aria-label="visit Antoine Debes Dot Com" class="text-decoration-none p-1" href="https://antoinedebes.com">
             <i class="icon-chevron-right"></i>
