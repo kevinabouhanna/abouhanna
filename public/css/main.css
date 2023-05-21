@@ -476,10 +476,6 @@ a:active {
     font-size: 1rem;
   }
 
-  .batata svg {
-    margin-bottom: 3px
-  }
-
   .harra {
     transform: translate(-8%, -72%);
     width: fit-content;
