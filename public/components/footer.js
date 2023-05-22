@@ -30,7 +30,8 @@ class Footer extends HTMLElement {
         <p class="webring-controls text-align-center">
           <a title="Visit gabykaram.com" aria-label="visit Gaby Karam Dot Com" class="text-decoration-none p-1" href="https://gabykaram.com">
             <i class="icon-chevron-left"></i>
-            <span class="webring-icon">💍</span>
+          </a>
+          <span class="webring-icon">💍</span>
           <a title="Visit andoinedebes.com" aria-label="visit Antoine Debes Dot Com" class="text-decoration-none p-1" href="https://antoinedebes.com">
             <i class="icon-chevron-right"></i>
           </a>
