@@ -28,7 +28,6 @@ class Footer extends HTMLElement {
         </footer>
         <div class="webring">
         <p class="batata__harra text-align-center">
-          <span class="stage__zero__text">A proud member of Stage Zero Webring</span>
           <a title="Visit gabykaram.com" aria-label="visit Gaby Karam Dot Com" class="text-decoration-none p-1" href="https://gabykaram.com">
             <i class="icon-chevron-left"></i>
           </a>
