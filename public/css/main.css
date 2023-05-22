@@ -368,12 +368,18 @@ a:active {
   transition: fill 0.2s ease-out;
 }
 
-.batata__harra {
+.webring-controls {
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 0.3em;
+}
+
+.webring-icon {
+  font-size: 20px;
+  padding: 0px 8px;
+  margin-top: -2px;
 }
 
 .stage__zero__text {
@@ -468,17 +474,12 @@ a:active {
     padding: 4em 0.75em;
   }
 
-  .batata__harra {
+  .webring-controls {
     justify-content: center;
   }
 
   .stage__zero__text {
     font-size: 1rem;
-  }
-
-  .harra {
-    transform: translate(-8%, -72%);
-    width: fit-content;
   }
 
   .wrapper {

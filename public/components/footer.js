@@ -27,18 +27,10 @@ class Footer extends HTMLElement {
           </div>
         </footer>
         <div class="webring">
-        <p class="batata__harra text-align-center">
+        <p class="webring-controls text-align-center">
           <a title="Visit gabykaram.com" aria-label="visit Gaby Karam Dot Com" class="text-decoration-none p-1" href="https://gabykaram.com">
             <i class="icon-chevron-left"></i>
-          </a>
-          <a rel="noopener" title="Stage Zero Webring" aria-label="Visit Stage Zero Webring" class="text-decoration-none m-1" href="https://batataharra.guru">
-              <span class="batata"><svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4.96077 1.5H4.65505L4.37372 1.61965C3.47636 2.00128 2.72577 2.59373 2.21364 3.42373C1.70769 4.24371 1.5 5.18884 1.5 6.1778C1.5 7.22759 1.94512 8.35804 2.56861 9.47713L2.56869 9.47727L5.45798 14.6619H3.20284H1.70284V16.1619V18.7763V20.2763H3.20284H9.17529H9.64895L10.0367 20.0043C10.3506 19.7841 10.6271 19.5387 10.8681 19.271V20.2763H12.3681H21H22.5V18.7763V16.1619V14.6619H21H18.0794L22.3151 6.31572L22.4775 5.99573V5.6369V3V1.5H20.9775H12.3681H11.8698H10.8681H10.3698H4.96077ZM10.894 11.6955L8.4332 7.20451H10.3698H10.8681H11.8698H12.3681H15.2459L11.8846 13.8418C11.6527 13.1548 11.3032 12.4307 10.894 11.6955Z" fill="white" stroke="black" stroke-width="3"/>
-              <path d="M12 11L13.7321 8H10.2679L12 11Z" fill="black"/>
-              <path d="M11.5 17.5L18 5.5H5.5L11.5 17.5Z" fill="black"/>
-              </svg>
-              </span>
-          </a>
+            <span class="webring-icon">💍</span>
           <a title="Visit andoinedebes.com" aria-label="visit Antoine Debes Dot Com" class="text-decoration-none p-1" href="https://antoinedebes.com">
             <i class="icon-chevron-right"></i>
           </a>

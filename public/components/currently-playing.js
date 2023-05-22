@@ -189,7 +189,6 @@ class CurrentlyPlaying extends HTMLElement {
     let hrs = myDate.getHours();
     let isLight = hrs >= 4 && hrs <= 17;
 
-    // e.g. https://batataharra.guru
     fetch(DATA_FOR_SPOTIFY)
       .then((response) => response.json())
       .then(({ isPlaying, data }) => { // isPlaying, author, message
