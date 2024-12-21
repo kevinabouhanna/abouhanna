@@ -31,7 +31,7 @@ class Footer extends HTMLElement {
           <a title="Visit gabykaram.com" aria-label="visit Gaby Karam Dot Com" class="text-decoration-none p-1" href="https://gabykaram.com">
             <i class="icon-chevron-left"></i>
           </a>
-          <span title="webring" class="webring-icon">💍</span>
+          <span title="webring" class="webring-icon">@</span>
           <a title="Visit andoinedebes.com" aria-label="visit Antoine Debes Dot Com" class="text-decoration-none p-1" href="https://antoinedebes.com">
             <i class="icon-chevron-right"></i>
           </a>
